@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="product-page">
+        <nav class="breadcrumb">
+          <a href="/" class="breadcrumb__link">Главная</a>
+          <span class="breadcrumb__separator">/</span>
+          <a href="/catalog" class="breadcrumb__link">Пигменты</a>
+          <span class="breadcrumb__separator">/</span>
+          <span class="breadcrumb__current">Название продукта</span>
+        </nav>
+      
+        <div class="product">
+          <!-- Left Side: Image Carousel -->
+          <div class="product__image-section">
+            <div class="swiper product__image-main">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide product__image-main-slide">
+                  <img src="img/696d67416464328dc83b889c344e0fullhd.png" alt="Product Image 1" class="product__image">
+                </div>
+                <div class="swiper-slide product__image-main-slide">
+                  <img src="img/696d67416464328dc83b889c344e0fullhd.png" alt="Product Image 2" class="product__image">
+                </div>
+              </div>
+              <!-- Стрелки навигации -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+
+            <!-- Thumbnail Navigation -->
+            <div class="swiper product__thumbnail">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide product__thumbnail-slide">
+                  <img src="img/thumb1.jpg" alt="Thumbnail 1" class="product__thumbnail-image">
+                </div>
+                <div class="swiper-slide product__thumbnail-slide">
+                  <img src="img/thumb2.jpg" alt="Thumbnail 2" class="product__thumbnail-image">
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Right Side: Product Information -->
+          <div class="product__info">
+            <h1 class="product__title">Loose Eyeshadow Pigment</h1>
+            <div class="product__price">
+              <span class="product__price-current">990 ₽</span>
+              <span class="product__price-old">1990 ₽</span>
+            </div>
+            <div class="product__purchase">
+              <div class="product__quantity">
+                <button class="product__quantity-button product__quantity-button--decrease">-</button>
+                <span class="product__quantity-value">1</span>
+                <button class="product__quantity-button product__quantity-button--increase">+</button>
+              </div>
+              <button class="product__cart-button">В корзину</button>
+              <button class="product__wishlist-button">&#x2764;</button>
+            </div>
+            <div class="product__colors">
+              <h3 class="product__colors-title">ОТТЕНКИ</h3>
+              <select class="product__colors-select">
+                <option>№001 - Название оттенка</option>
+                <option>№002 - Название оттенка</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Подключение Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script>
+        const mainSwiper = new Swiper('.product__image-main', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            }
+          });
+
+          const thumbnailSwiper = new Swiper('.product__thumbnail', {
+            slidesPerView: 4,
+            spaceBetween: 8,
+            slideToClickedSlide: true,
+          });
+
+          mainSwiper.controller.control = thumbnailSwiper;
+          thumbnailSwiper.controller.control = mainSwiper;
+      </script>
+</body>
+</html>
