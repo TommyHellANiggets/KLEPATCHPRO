@@ -1,66 +1,132 @@
 function toggleCatalog() {
-    const catalog = document.getElementById('catalog');
-    const button = document.querySelector('.header__catalog-button');
+  const catalog = document.getElementById('catalog');
+  const button = document.querySelector('.header__catalog-button');
 
-    // Проверяем текущее состояние каталога и переключаем его
-    if (catalog.style.display === "none" || catalog.style.display === "") {
-        catalog.style.display = "flex";
-        button.classList.add('active');
-    } else {
-        catalog.style.display = "none";
-        button.classList.remove('active');
-    }
+  // Проверяем текущее состояние каталога и переключаем его
+  if (catalog.style.display === "none" || catalog.style.display === "") {
+      catalog.style.display = "flex";
+      button.classList.add('active');
+  } else {
+      catalog.style.display = "none";
+      button.classList.remove('active');
+  }
 }
-
 
 function toggleSearch() {
-    const searchBar = document.getElementById('searchBar');
-    searchBar.classList.toggle('active');
+  const searchBar = document.getElementById('searchBar');
+  searchBar.classList.toggle('active');
 }
-
-
 
 const cartLink = document.querySelector('.cart-a');
 const cartOverlay = document.querySelector('.cart__overlay');
 const cartClose = document.querySelector('.cart__close');
 
 cartLink.addEventListener('click', (e) => {
-    e.preventDefault();
-    cartOverlay.style.display = 'block';
-    document.body.style.overflow = 'hidden';
+  e.preventDefault();
+  cartOverlay.style.display = 'block';
+  document.body.style.overflow = 'hidden';
 });
 
 cartClose.addEventListener('click', closeCart);
 
 cartOverlay.addEventListener('click', (e) => {
-    if (e.target === cartOverlay) {
-        closeCart();
-    }
+  if (e.target === cartOverlay) {
+      closeCart();
+  }
 });
 
 function closeCart() {
-    cartOverlay.style.display = 'none';
-    document.body.style.overflow = 'auto';
+  cartOverlay.style.display = 'none';
+  document.body.style.overflow = 'auto';
 }
 
-
 document.addEventListener('scroll', function () {
-    const header = document.querySelector('.header');
-    
-    if (window.scrollY > 0) {
+  const header = document.querySelector('.header');
+
+  if (window.scrollY > 0) {
       header.classList.remove('transparent');
       header.classList.add('white');
-    } else {
+  } else {
       header.classList.remove('white');
       header.classList.add('transparent');
-    }
-  });
-  
-  // Инициализация состояния для заголовка при загрузке страницы
-  document.addEventListener('DOMContentLoaded', function () {
-    const header = document.querySelector('.header');
-    if (window.scrollY === 0) {
+  }
+});
+
+// Инициализация состояния для заголовка при загрузке страницы
+document.addEventListener('DOMContentLoaded', function () {
+  const header = document.querySelector('.header');
+  if (window.scrollY === 0) {
       header.classList.add('transparent');
-    }
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const burgerToggle = document.querySelector('.burger__toggle');
+  const burgerMenu = document.querySelector('.burger-menu');
+  const body = document.body;
+  const burgerIcon = burgerToggle.querySelector('.burger-icon');
+  const closeIcon = burgerToggle.querySelector('.close-icon');
+
+  burgerToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      burgerMenu.classList.toggle('active');
+
+      if (burgerMenu.classList.contains('active')) {
+          body.classList.add('no-scroll'); // Блокируем прокрутку страницы
+          burgerIcon.style.display = 'none'; // Скрываем бургер-иконку
+          closeIcon.style.display = 'block'; // Показываем иконку закрытия
+      } else {
+          body.classList.remove('no-scroll'); // Разрешаем прокрутку
+          burgerIcon.style.display = 'block'; // Показываем бургер-иконку
+          closeIcon.style.display = 'none'; // Скрываем иконку закрытия
+      }
   });
-  
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.catalog__mobile-button');
+
+  buttons.forEach(button => {
+      button.addEventListener('click', () => {
+          const list = button.nextElementSibling;
+
+          // Проверяем, что следующий элемент существует и имеет нужный класс
+          if (list && list.classList.contains('catalog__mobile-button__list')) {
+              // Закрытие всех других активных списков
+              buttons.forEach(btn => {
+                  const otherList = btn.nextElementSibling;
+                  if (btn !== button && otherList && otherList.classList.contains('active')) {
+                      btn.classList.remove('active');
+                      otherList.classList.remove('active');
+                  }
+              });
+
+              // Переключение текущего списка
+              button.classList.toggle('active');
+              list.classList.toggle('active');
+          }
+      });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleButton = document.querySelector('.catalog-mobile__toggle');
+  const overlay = document.querySelector('.catalog-mobile');
+  const closeButton = document.querySelector('.close-catalog'); // Элемент кнопки закрытия
+
+  toggleButton.addEventListener('click', function() {
+      overlay.classList.toggle('active');
+  });
+
+  // Закрытие по клику вне меню
+  overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) {
+          overlay.classList.remove('active');
+      }
+  });
+
+  // Закрытие по клику на кнопку закрытия
+  closeButton.addEventListener('click', function() {
+      overlay.classList.remove('active');
+  });
+});

@@ -194,6 +194,7 @@ body {
     height: 91px;
     width: 100%;
     transition: background-color 0.2s ease;
+    z-index: 2;
 }
 
 .header.transparent {
@@ -1239,6 +1240,11 @@ border: none;
         position: relative;
         left: 20px;
         padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .header {
+        height: auto;
     }
 
     .nav-banner {
@@ -1288,4 +1294,265 @@ border: none;
         justify-content: space-between;
         gap: 15px;
     }
+}
+
+.catalog-mobile__toggle,
+.clients-mobile__toggle {
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    height: 42px;
+    border: 1px solid #DDDDDD;
+    border-radius: 30px;
+    background-color: transparent;
+    padding-inline: 29px;
+}
+
+.catalog-mobile__toggle {
+    background-color: #000000;
+    border: #000000;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.burger-menu {
+    display: none;
+    transform: translateY(-100%); /* Для плавного появления */
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto; /* Прокрутка внутри меню */
+}
+
+
+
+/* Ограничение прокрутки страницы при активном меню */
+body.no-scroll {
+    overflow: hidden; /* Отключаем прокрутку страницы */
+}
+
+@media (max-width: 768px) {
+    .burger-menu.active {
+        display: flex;
+        position: fixed; /* Фиксируем перед пользователем */
+        top: 0;
+        background-color: white;
+        height: 100vh;
+        width: 100%;
+        z-index: 1; 
+        flex-direction: column;
+        align-items: center;
+        padding-top: 70px;
+        padding-inline: 0px;
+        transform: translateY(0); /* Плавное появление */
+    }
+}
+
+.burger__item {
+    margin: 35px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.burger__link {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    text-align: center;
+}
+
+.separartor-mobile {
+    height: 1px;
+    width: 100%;
+    background-color: #F2F2F2;
+}
+
+.burger-phone {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 117.15%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #000000;
+    margin-top: 35px;
+}
+
+.support {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #000000;
+    margin: 20px 0;
+}
+
+.burger-links {
+    background-color: transparent;
+    fill: none;
+}
+
+.burger-links__block {
+    display: flex;
+    gap: 25px;
+}
+
+.burger__toggle svg {
+    width: 100%;
+    height: auto;
+    display: block; /* Убедитесь, что они отображаются как блочные элементы */
+}
+
+.burger__toggle svg path {
+    stroke: black; /* Черный цвет обводки */
+    stroke-width: 1.5; /* Толщина обводки */
+    stroke-linecap: round; /* Оконечности линий закруглены */
+}
+
+.burger-icon,
+.close-icon {
+    width: 20px; /* Установите подходящий размер */
+    height: auto;
+    display: inline-block; /* Отображение в одной строке */
+}
+
+
+.catalog-mobile {
+    display: none; /* Скрыто по умолчанию */
+    position: absolute; /* Окно позиционируется относительно */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%; /* Заполняет всю высоту экрана */
+    background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный черный фон */
+    z-index: 100;
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    overflow-y: auto; 
+}
+
+.catalog-mobile.active {
+    display: block; /* Показать при активации */
+}
+
+.catalog__container {
+    position: relative;
+    width: 100%; /* Адаптируйте ширину по необходимости */
+    min-height: calc(100vh - 40px);
+    height: auto;
+    border-radius: 28px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto; /* Прокрутка внутри контейнера */
+    box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+    left: -20px;
+    padding-bottom: 30px;
+}
+
+
+.catalog__mobile-search {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 15px;
+    margin-top: 13px;
+    align-items: center;
+}
+
+.catalog__mobile-searchbar {
+    display: flex;
+    justify-content: space-between;
+    max-width: calc(100% - 40px);
+    width: 100%;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 100px;
+    align-items: center;
+    padding-inline: 20px;
+}
+
+.catalog__mobile-searchbar__input {
+    display: flex;
+    border-radius: 100px;
+    width: 100%;
+    outline: none;
+    border: none;
+    justify-content: space-between;
+    height: 48px;
+}
+
+.close-catalog {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.separartor-mobile2 {
+    height: 1px;
+    width: 100%;
+    background-color: #DDDDDD;
+}
+
+.catalog__mobile-button {
+    width: 100%;
+    margin-inline: 20px;
+    width: calc(100% - 40px);
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #000000;
+    padding: 0;
+}
+
+.catalog__mobile-button__item {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 319%;
+    letter-spacing: 0.01em;
+    color: #000000;
+    margin-inline: 20px;
+}
+
+
+.catalog__mobile-button svg {
+    transition: transform 0.3s;
+}
+
+.catalog__mobile-button.active svg {
+    transform: rotate(180deg);
+}
+
+.catalog__mobile-button__list {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.catalog__mobile-button__list.active {
+    display: block;
 }
