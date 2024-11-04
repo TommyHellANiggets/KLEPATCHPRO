@@ -2,7 +2,6 @@ function toggleCatalog() {
   const catalog = document.getElementById('catalog');
   const button = document.querySelector('.header__catalog-button');
 
-  // Проверяем текущее состояние каталога и переключаем его
   if (catalog.style.display === "none" || catalog.style.display === "") {
       catalog.style.display = "flex";
       button.classList.add('active');
@@ -14,7 +13,16 @@ function toggleCatalog() {
 
 function toggleSearch() {
   const searchBar = document.getElementById('searchBar');
-  searchBar.classList.toggle('active');
+  const isMobile = window.innerWidth <= 768; // Проверка ширины окна
+
+  if (isMobile) {
+      // Если мобильный, переключаем видимость контейнера поиска
+      const searchContainer = document.querySelector('.search-mobile__container');
+      searchContainer.style.display = searchContainer.style.display === 'block' ? 'none' : 'block';
+  } else {
+      // Если на десктопе, просто переключаем класс активности
+      searchBar.classList.toggle('active');
+  }
 }
 
 const cartLink = document.querySelector('.cart-a');
@@ -90,9 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
       button.addEventListener('click', () => {
           const list = button.nextElementSibling;
 
-          // Проверяем, что следующий элемент существует и имеет нужный класс
           if (list && list.classList.contains('catalog__mobile-button__list')) {
-              // Закрытие всех других активных списков
               buttons.forEach(btn => {
                   const otherList = btn.nextElementSibling;
                   if (btn !== button && otherList && otherList.classList.contains('active')) {
@@ -101,7 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
                   }
               });
 
-              // Переключение текущего списка
               button.classList.toggle('active');
               list.classList.toggle('active');
           }
@@ -112,21 +117,34 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', function() {
   const toggleButton = document.querySelector('.catalog-mobile__toggle');
   const overlay = document.querySelector('.catalog-mobile');
-  const closeButton = document.querySelector('.close-catalog'); // Элемент кнопки закрытия
+  const closeButton = document.querySelector('.close-catalog');
 
   toggleButton.addEventListener('click', function() {
       overlay.classList.toggle('active');
   });
 
-  // Закрытие по клику вне меню
   overlay.addEventListener('click', function(e) {
       if (e.target === overlay) {
           overlay.classList.remove('active');
       }
   });
 
-  // Закрытие по клику на кнопку закрытия
   closeButton.addEventListener('click', function() {
       overlay.classList.remove('active');
   });
 });
+
+// Toggle search container on search button click
+document.querySelector('.search-mobile').addEventListener('click', () => {
+  const searchContainer = document.querySelector('.search-mobile__container');
+  searchContainer.style.display = searchContainer.style.display === 'block' ? 'none' : 'block';
+  document.body.style.overflow = searchContainer.style.display === 'block' ? 'hidden' : 'auto'; // Prevent scrolling when open
+});
+
+// Toggle burger menu on burger button click
+document.querySelector('.burger-mobile').addEventListener('click', () => {
+  const burgerMenu = document.querySelector('.menu'); // Replace '.menu' with the actual burger menu element selector
+  burgerMenu.style.display = burgerMenu.style.display === 'block' ? 'none' : 'block';
+  document.body.style.overflow = burgerMenu.style.display === 'block' ? 'hidden' : 'auto'; // Prevent scrolling when open
+});
+  

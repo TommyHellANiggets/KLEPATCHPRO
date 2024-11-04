@@ -249,6 +249,7 @@ body {
     gap: 32px;
     align-items: center;
     position: relative;
+    
 }
 
 .partneer-a,
@@ -1262,7 +1263,7 @@ border: none;
 
 .navbottom-mobile {
     position: fixed;
-    z-index: 99;
+    z-index: 199;
     bottom: 0;
     background-color: rgb(255, 255, 255);
 
@@ -1555,4 +1556,348 @@ body.no-scroll {
 
 .catalog__mobile-button__list.active {
     display: block;
+}
+
+.search-mobile__container {
+    width: 100vw;
+    height: calc(100vh - 65px);
+    z-index: 110;
+    position: relative;
+    background-color: white;
+    padding-inline: 20px;
+    display: none;
+    margin: 0;
+}
+menu {
+    transition: all 0.3s ease;
+    display: none; /* Start hidden */
+}
+
+
+@media (max-width: 768px) {
+    .search-mobile__container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.search-mobile,
+.burger-mobile {
+    background-color: transparent;
+    border: none;
+    height: 24px;
+}
+
+.search-mobile__container-top {
+    display: flex;
+    height: 80.77px;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.brand-logo__link {
+    height: 38px;
+}
+
+.header {
+    top: 0;
+}
+
+.header__button,
+.blog-a,
+.partneer-a,
+.search-a,
+.cart-a,
+.profile-a,
+.like-a {
+    color: #000000 !important;
+}
+
+.header__catalog-button {
+    color: white !important;
+}
+
+
+.need-help {
+    margin-top: 100px;
+    background-color: #6ED3DE;
+    border-radius: 22px;
+    max-width: 1356px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.need-help__link {
+    width: 278px;
+    height: 48px;
+    background: #000000;
+    border-radius: 100px;
+    padding-inline: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+}
+
+.need-help__left h3 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 117.15%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #000000;
+    padding-top: 50px;
+}
+
+.need-help__left h2 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 66.1398px;
+    line-height: 117.15%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #000000;
+}
+
+.need-help__right-top {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-bottom: 22px;
+}
+
+.need-help__right-bottom {
+    display: flex;
+    gap: 8px;
+}
+
+.need-help__right-top {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #000000;
+}
+
+@media (max-width: 1200px) {
+    .need-help {
+        display: block;
+        width: calc(100% - 40px);
+    }
+
+    .need-help__left,
+    .need-help__right {
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
+
+
+.mobile__help {
+    display: none;
+}
+
+@media (max-width: 650px) {
+    .need-help__right-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .need-help__right-bottom {
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+
+    .need-help__left {
+        text-align: center;
+    }
+
+    .need-help__left h2 {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 35.14px;
+        letter-spacing: 0.01em;
+        text-align: left;
+        padding-bottom: 20px;
+    }
+
+    .need-help__left h3 {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 14.06px;
+        letter-spacing: 0.03em;
+    }
+
+    .mobile__help {
+        display: block !important;
+        padding-bottom: 6px;
+    }
+
+    .desktop__help {
+        display: none;
+    }
+
+    .order__header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .order__header__left-bottom {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .order__header__right {
+        gap: 8px;
+    }
+
+    .need-help {
+        margin-bottom: 50px !important;
+        margin-top: 50px !important;
+    }
+    
+}
+
+.discounts {
+    max-width: 1470px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 120px;
+    margin-bottom: 60px;
+
+}
+
+.carousel-nav__btn {
+    background-color: transparent;
+    border: none;
+
+}
+
+.discounts__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+.prev {
+    color: #B4B4B4;
+    
+}
+
+.carousel-nav {
+    display: flex;
+    gap: 35px;
+}
+
+
+
+.like-button {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+.discount__card {
+    position: relative;
+    max-width: 300px;
+    background: #F2F3F6;
+    height: 490px;
+    border-radius: 20px;
+}
+
+.sale-logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: #D866A3;
+}
+
+.discount__card-category {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #B4B4B4;
+}
+
+.discount__card-title {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    padding: 8px 0;
+}
+
+.discount__card-content {
+    padding: 24px 30px;
+}
+
+.discount__card-price {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #000000;
+}
+
+.discount__card-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #000000;
+    color: white;
+    border: none;
+    width: 60px;
+    aspect-ratio: 1;
+}
+
+.discount__card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.discount__middle {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1350px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.product-color {
+    background-color: #6ED3DE !important;
+    width: 100%;
+    border-radius: 20px;
+    height: 870px;
 }

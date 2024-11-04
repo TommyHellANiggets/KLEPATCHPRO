@@ -540,3 +540,57 @@ margin: 0 auto;
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: #000000;
 }
+
+@media (max-width: 1200px) {
+    .order-content {
+        display: none;
+    }
+
+    .order-frame {
+        margin: 0 auto;
+        padding-inline: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .order-step__delivery-options,
+    .order-step__input-group {
+        flex-wrap: wrap;
+    }
+
+    .order-step__delivery-option {
+        width: 100%;
+    }
+
+    .order-step__payment-options {
+        flex-wrap: wrap;
+    }
+
+    .order-step__notice {
+        text-align: center;
+    }
+
+    .nav-banner__title {
+        font-size: 30px;
+    }
+
+    .nav-banner {
+        padding-left: 20px;
+    }
+
+    .order-step__notice {
+        margin-bottom: 60px;
+    }
+}
+
+.nav-banner {
+    margin-top: 100px;
+}
+
+.header {
+    top: 0;
+}
+
+.order-step__notice {
+    margin-bottom: 100px;
+}
