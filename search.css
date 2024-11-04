@@ -1,0 +1,374 @@
+body{
+    
+    font-family: "Raleway", sans-serif;
+
+}
+
+.catalog__card-other{
+    width: 299px;
+    height: 490px;
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 55px;
+    border-radius: 20px;
+    background-color: #EFEFEF;
+    position: relative;
+    
+}
+.catalog__card{
+    background-color: #F2F3F6;
+}
+
+.catalog__card-other img{
+    border-radius: 20px;
+}
+
+
+.sale{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 56px;
+    height: 24px;
+}
+
+.card__container{
+    margin-left: 20px;
+    position: absolute;
+    bottom: 10px;
+}
+
+
+
+.card__dialog{
+    color: #B4B4B4;
+    margin-bottom: -10px;
+}
+
+.price-container{
+    display: flex;
+    align-items: center;
+}
+
+.card__price{
+width: 55px;
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+font-feature-settings: 'pnum' on, 'lnum' on;
+
+color: #000000;
+
+
+}
+
+.favorities-button{
+    position: absolute;
+    right: 20px;
+    margin-top: 20px;
+    
+}
+
+
+
+.catalog{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 350px 350px 350px 350px;
+    justify-content: center;  
+}
+
+.catalog__image{
+    margin-left: 15px;
+    z-index: 1000;
+    grid-column: span 2;
+}
+
+.catalog-button{
+    width: 250px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    background-color: black;
+    text-decoration: none;
+    color:  white;
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.image{
+    max-width:1697px;
+    width: 100%;
+    height: 330px ;
+    background-image: url(image/696d67416464328dc83b889c344e0fullhd.png) ;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.catalog__card-other img{
+    width: 298px;
+    height: 324px;
+}
+
+
+.navigation-container{
+    display: flex;
+}
+
+.Oplata-container{
+    padding-top: 180px;
+    padding-left: 50px;
+}
+.slesh {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.image__src{
+    text-decoration: none;
+    color: #B4B4B4;
+    
+}
+.image__src:last-child{
+    
+    color: black;
+    
+}
+.Oplata-title{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+  .button-container1 {
+    margin-left: 140px;
+    
+}
+
+.icon-button {
+    background-color: black;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon-button svg {
+    width: 20px;
+    height: 20px; 
+    fill: white; 
+}
+
+ 
+ .button-catalog{
+    text-decoration: none;
+    color: white;
+   
+   
+ }
+
+ 
+
+ 
+
+.price-container{
+    display: flex;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    width: 550px;
+    height: 50px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding: 0 15px;
+    font-family: Arial, sans-serif;
+}
+.custom-input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 20px;
+}
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-left: 10px;
+}
+.icon-button svg {
+    width: 18px;
+    height: 18px;
+    fill: black;
+}
+
+.zapros{
+    margin-top: 30px;
+    margin-left: 23%;
+    
+}
+
+.zapros__title{
+    font-size: 50px;
+}
+
+
+  @media(max-width:1400px){
+    .catalog{
+        grid-template-columns: 350px 350px 350px;
+    }
+    .catalog__image{
+        display: none;
+    }
+
+    .dropdow-button-container{
+        flex-wrap: wrap;
+    }
+    
+} 
+
+@media(max-width:1100px){
+    .catalog{
+        grid-template-columns: 350px 350px;
+    }
+    
+}
+
+@media(max-width:700px){
+    .catalog{
+        grid-template-columns: 190px 190px;
+    }
+    .catalog__image{
+        display: none;
+    }
+
+    .catalog__card{
+        width: 155px;
+        height: 255px;
+        background-image: url(image/696d67416464318dc841443104f92fullhd1.png);
+    }
+    .catalog__card-other {
+        width: 155px;
+        height: 255px;
+        margin-bottom: 30px;
+    }
+    .catalog__card-other img{
+        width: 155px;
+        height: 150px;
+    }
+   .button-container1{
+    margin-left: 30px;
+   }
+    .card__dialog{
+        font-size: 7px;
+    }
+    .card__title{
+        font-size: 12px;
+    }
+    .card__price{
+        font-size: 12px;
+    }
+    .basket-button{
+        width: 10px;
+        height: 10px;
+        
+    }
+    .basket-button svg{
+        width: 20px;
+        height: 10px;
+        
+    }
+
+    .sale{
+        width: 30px;
+        height: 12px;
+    }
+
+    .icon-button{
+        width: 30px;
+        height: 30px;
+    }
+    .icon-button svg {
+        width: 10px;
+        height: 10px; 
+        
+    }
+
+    .favorities-button svg{
+        width: 12px;
+        height: 10px;
+    }
+
+    .favorities-button{
+        margin-top: 10px;
+    }
+
+    .sale{
+        top: 10px;
+        left: 10px;
+    }
+
+    
+}
+
+@media(max-width:375px){
+    .image{
+        max-width: 361px;
+        width: 100%;
+        height:221px;
+        background-image: url(image/pigment.png) ;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .navigation-container{
+        display: none;
+    }
+    .Oplata-container{
+      padding-top: 140px;
+      
+        
+    }
+    .Oplata-title{
+        margin-left: -30px;
+      
+        font-size: 30px;
+        
+    }
+
+    .catalog{
+        grid-template-columns: 170px 170px;
+        margin-left: -20px;
+    }
+
+    .catalog__card-other {
+        
+        margin-bottom: 15px;
+    }
+
+}
+
+
+
+

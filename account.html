@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="account.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+    <title>Account</title>
+</head>
+<body>
+
+<!-- Кнопка для открытия модального окна -->
+<button id="openModalBtn">Войти / Зарегистрироваться</button>
+
+<!-- Модальное окно -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <!-- Кнопка для закрытия модального окна -->
+        <span id="closeModalBtn" class="close">&times;</span>
+        
+        <!-- Заголовок модального окна (динамически изменяется) -->
+        <h2 id="modalTitle" >Регистрация на сайте</h2>
+        
+        <!-- Переключатель между формами Входа и Регистрации -->
+        <div class="form-switch">
+            <button id="loginBtn" class="switch-btn">Вход</button>
+            <div class="slesh">/</div>
+            <button id="registerBtn" class="switch-btn active">Регистрация</button>
+        </div>
+
+        <!-- Форма регистрации -->
+        <form id="registerForm" class="form">
+            <input class="form__item" type="text" placeholder="ФИО">
+            <input class="form__item" type="email" placeholder="Ваш e-mail">
+            <input class="form__item" type="tel" placeholder="Телефон">
+            
+            <!-- Поле для пароля с иконкой для переключения видимости -->
+            <div class="password-input-wrapper">
+                <input class="form__item" type="password" id="registerPassword" placeholder="Придумайте пароль">
+                <button type="button" class="toggle-password" onclick="togglePassword('registerPassword')">
+                    <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.6501 4.50148C13.6501 4.50148 10.8196 8.44826 7.32504 8.44826C3.83048 8.44826 1 4.50148 1 4.50148C1 4.50148 3.83048 0.554688 7.32504 0.554688C10.8196 0.554688 13.6501 4.50148 13.6501 4.50148Z" stroke="#B4B4B4"/>
+                        <path d="M7.32426 6.85326C8.60791 6.85326 9.64852 5.80093 9.64852 4.5028C9.64852 3.20468 8.60791 2.15234 7.32426 2.15234C6.04061 2.15234 5 3.20468 5 4.5028C5 5.80093 6.04061 6.85326 7.32426 6.85326Z" fill="#B4B4B4"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <label class="custom-checkbox">
+                <input type="checkbox">
+                <span class="checkmark">
+                    <!-- SVG для пустого бокса -->
+                    <svg class="box" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="16" height="16" rx="4.5" stroke="black"/>
+                    </svg>
+                    <!-- SVG для галочки, отображается только когда чекбокс активен -->
+                    <svg class="checkmark-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 5.64879L9.4668 0.382812L10.2682 1.1842L4.20082 7.25156L0.966797 4.01753L1.76818 3.21615L4.20082 5.64879Z" fill="black"/>
+                    </svg>
+                </span>
+                Получать по email информацию об акциях, новинках
+            </label>
+            
+            <button class="register__button" type="submit">Зарегистрироваться</button>
+        </form>
+
+        <!-- Форма входа -->
+        <form id="loginForm" class="form hidden">
+            <input type="email" placeholder="Ваш e-mail">
+            <div class="password-input-wrapper">
+                <input type="password" id="loginPassword" placeholder="Пароль">
+                <button type="button" class="toggle-password" onclick="togglePassword('loginPassword')">
+                    <!-- SVG иконка для показа пароля -->
+                    <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.6501 4.50148C13.6501 4.50148 10.8196 8.44826 7.32504 8.44826C3.83048 8.44826 1 4.50148 1 4.50148C1 4.50148 3.83048 0.554688 7.32504 0.554688C10.8196 0.554688 13.6501 4.50148 13.6501 4.50148Z" stroke="#B4B4B4"/>
+                        <path d="M7.32426 6.85326C8.60791 6.85326 9.64852 5.80093 9.64852 4.5028C9.64852 3.20468 8.60791 2.15234 7.32426 2.15234C6.04061 2.15234 5 3.20468 5 4.5028C5 5.80093 6.04061 6.85326 7.32426 6.85326Z" fill="#B4B4B4"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="loginForm__container">
+                <button class="loginForm__button" type="submit">Войти</button>
+                <a href="#" class="resetPasswordLink" id="resetPasswordLink">Забыли пароль?</a>
+            </div>
+        </form>
+
+        <!-- Форма восстановления пароля -->
+        <form id="resetForm" class="form hidden">
+            <h3>Восстановление пароля</h3>
+            <p class="resetForm__dialog">Введите ваш e-mail, и мы отправим вам инструкции по восстановлению пароля.</p>
+            <input type="email" placeholder="Ваш e-mail">
+            <button type="submit" id="submitReset">Восстановить</button>
+        </form>
+
+        <!-- Уведомление об успешной отправке -->
+        <div id="resetSuccess" class="form hidden">
+            <h3>Восстановление пароля</h3>
+            <p class="resetForm__dialog">Ссылка на восстановление вашего пароля отправлена на указанный email.</p>
+            <button id="createNewPassword">Ввести новый пароль</button>
+        </div>
+        
+         <!-- Форма для ввода нового пароля -->
+         <form id="newPasswordForm" class="form hidden">
+            <input type="password" placeholder="Введите новый пароль">
+            <input type="password" placeholder="Повторите новый пароль">
+            <button type="submit">Восстановить</button>
+        </form>
+    </div>
+</div>
+
+<script src="account.js"></script>
+</body>
+</html>
+

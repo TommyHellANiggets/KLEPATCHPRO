@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="catalog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Catalog</title>
+
+</head>
+<body>
+    <section>
+
+    
+    <div class="image">
+        <div class="Oplata-container">
+            <h1 class="Oplata-title">Пигменты</h1>
+            <div class="navigation-container">
+                <a class="image__src" href="#">Главная</a>
+                <div class="slesh">/</div>
+                <a class="image__src" href="#">Пигменты</a>
+            </div>
+        </div>
+        
+    </div>
+    </section>
+    <section>
+        <div class="dropdow-button-container">
+            <div class="dropdow-adaptiv">
+                <div class="button-catalog-container">
+                    <a class="button-catalog" href="">Каталог</a>
+                </div>
+                <button class="button-filter" id="button-filter">Фильтр</button>
+            </div>
+            <div class="overlay" id="overlay"></div>
+
+            <div id="dropdow-container" class="dropdow-container" >
+                <button  id="close-btn" onclick="toggleMenu()" class="none"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.10645 1L15.2128 15.1778" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M15.1064 1L1.00007 15.1778" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    </button>
+                <p id="dropdow-adaptiv-title"class="none">Фильтр</p>
+            <div class="dropdown " >
+                <button class="dropdown-button none-adaptiv">
+                    Категория
+                    <span class="arrow"><svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.4135 0.994291L7.80288 7.00391L1.1923 0.994291"  stroke-width="1.74072" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </span>
+                </button>
+                <div class="dropdown-content">
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">
+                            <!-- SVG для пустого бокса -->
+                            <svg id="toggle-button" class="box" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="16" height="16" rx="4.5" />
+                            </svg>
+                            <!-- SVG для галочки, отображается только когда чекбокс активен -->
+                            <svg class="checkmark-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 5.64879L9.4668 0.382812L10.2682 1.1842L4.20082 7.25156L0.966797 4.01753L1.76818 3.21615L4.20082 5.64879Z" fill="black"/>
+                            </svg>
+                        </span>
+                        
+                       Пигменты
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">
+                            <!-- SVG для пустого бокса -->
+                            <svg class="box" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="16" height="16" rx="4.5" />
+                            </svg>
+                            <!-- SVG для галочки, отображается только когда чекбокс активен -->
+                            <svg class="checkmark-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 5.64879L9.4668 0.382812L10.2682 1.1842L4.20082 7.25156L0.966797 4.01753L1.76818 3.21615L4.20082 5.64879Z" fill="black"/>
+                            </svg>
+                        </span>
+                        Тинты
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">
+                            <!-- SVG для пустого бокса -->
+                            <svg class="box" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="16" height="16" rx="4.5" />
+                            </svg>
+                            <!-- SVG для галочки, отображается только когда чекбокс активен -->
+                            <svg class="checkmark-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 5.64879L9.4668 0.382812L10.2682 1.1842L4.20082 7.25156L0.966797 4.01753L1.76818 3.21615L4.20082 5.64879Z" fill="black"/>
+                            </svg>
+                        </span>
+                        Кисти
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">
+                            <!-- SVG для пустого бокса -->
+                            <svg class="box" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="16" height="16" rx="4.5" />
+                            </svg>
+                            <!-- SVG для галочки, отображается только когда чекбокс активен -->
+                            <svg class="checkmark-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 5.64879L9.4668 0.382812L10.2682 1.1842L4.20082 7.25156L0.966797 4.01753L1.76818 3.21615L4.20082 5.64879Z" fill="black"/>
+                            </svg>
+                        </span>
+                        Праймер
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">
+                            <!-- SVG для пустого бокса -->
+                            <svg class="box" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="16" height="16" rx="4.5" />
+                            </svg>
+                            <!-- SVG для галочки, отображается только когда чекбокс активен -->
+                            <svg class="checkmark-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 5.64879L9.4668 0.382812L10.2682 1.1842L4.20082 7.25156L0.966797 4.01753L1.76818 3.21615L4.20082 5.64879Z" fill="black"/>
+                            </svg>
+                        </span>
+                        Глиттеры
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">
+                            <!-- SVG для пустого бокса -->
+                            <svg class="box" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="16" height="16" rx="4.5" />
+                            </svg>
+                            <!-- SVG для галочки, отображается только когда чекбокс активен -->
+                            <svg class="checkmark-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 5.64879L9.4668 0.382812L10.2682 1.1842L4.20082 7.25156L0.966797 4.01753L1.76818 3.21615L4.20082 5.64879Z" fill="black"/>
+                            </svg>
+                        </span>
+                        Наборы
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">
+                            <!-- SVG для пустого бокса -->
+                            <svg class="box" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="16" height="16" rx="4.5" />
+                            </svg>
+                            <!-- SVG для галочки, отображается только когда чекбокс активен -->
+                            <svg class="checkmark-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 5.64879L9.4668 0.382812L10.2682 1.1842L4.20082 7.25156L0.966797 4.01753L1.76818 3.21615L4.20082 5.64879Z" fill="black"/>
+                            </svg>
+                        </span>
+                        Ультрахамелеоны
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">
+                            <!-- SVG для пустого бокса -->
+                            <svg class="box" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="16" height="16" rx="4.5" />
+                            </svg>
+                            <!-- SVG для галочки, отображается только когда чекбокс активен -->
+                            <svg class="checkmark-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 5.64879L9.4668 0.382812L10.2682 1.1842L4.20082 7.25156L0.966797 4.01753L1.76818 3.21615L4.20082 5.64879Z" fill="black"/>
+                            </svg>
+                        </span>
+                        Хайлайтеры
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">
+                            <!-- SVG для пустого бокса -->
+                            <svg class="box" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="16" height="16" rx="4.5" />
+                            </svg>
+                            <!-- SVG для галочки, отображается только когда чекбокс активен -->
+                            <svg class="checkmark-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 5.64879L9.4668 0.382812L10.2682 1.1842L4.20082 7.25156L0.966797 4.01753L1.76818 3.21615L4.20082 5.64879Z" fill="black"/>
+                            </svg>
+                        </span>
+                        Палетки
+                    </label>
+                    <button class="apply-button">Применить</button>
+                </div>
+            </div>
+    
+            <!-- Кнопка "Оттенок" -->
+            <div class="dropdown">
+                <button class="dropdown-button correct-position">
+                    Оттенок
+                    <span class="arrow"><svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.4135 0.994291L7.80288 7.00391L1.1923 0.994291"  stroke-width="1.74072" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></span>
+                </button>
+                <div class="dropdown-content correct-position correct-position-content">
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">
+                            <!-- SVG для пустого бокса -->
+                            <svg class="box" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="16" height="16" rx="4.5"/>
+                            </svg>
+                            <!-- SVG для галочки, отображается только когда чекбокс активен -->
+                            <svg class="checkmark-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 5.64879L9.4668 0.382812L10.2682 1.1842L4.20082 7.25156L0.966797 4.01753L1.76818 3.21615L4.20082 5.64879Z" fill="black"/>
+                            </svg>
+                        </span>
+                        <div class="shade shade--color"></div>
+                        №109 название оттенка
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">
+                            <!-- SVG для пустого бокса -->
+                            <svg class="box" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="16" height="16" rx="4.5" />
+                            </svg>
+                            <!-- SVG для галочки, отображается только когда чекбокс активен -->
+                            <svg class="checkmark-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 5.64879L9.4668 0.382812L10.2682 1.1842L4.20082 7.25156L0.966797 4.01753L1.76818 3.21615L4.20082 5.64879Z" fill="black"/>
+                            </svg>
+                        </span>
+                        <div class="shade shade--color"></div>
+                        №109 название оттенка
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">
+                            <!-- SVG для пустого бокса -->
+                            <svg class="box" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="16" height="16" rx="4.5" />
+                            </svg>
+                            <!-- SVG для галочки, отображается только когда чекбокс активен -->
+                            <svg class="checkmark-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 5.64879L9.4668 0.382812L10.2682 1.1842L4.20082 7.25156L0.966797 4.01753L1.76818 3.21615L4.20082 5.64879Z" fill="black"/>
+                            </svg>
+                        </span>
+                        <div class="shade shade--color"></div>
+                        №109 название оттенка
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">
+                            <!-- SVG для пустого бокса -->
+                            <svg class="box" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="16" height="16" rx="4.5" />
+                            </svg>
+                            <!-- SVG для галочки, отображается только когда чекбокс активен -->
+                            <svg class="checkmark-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 5.64879L9.4668 0.382812L10.2682 1.1842L4.20082 7.25156L0.966797 4.01753L1.76818 3.21615L4.20082 5.64879Z" fill="black"/>
+                            </svg>
+                        </span>
+                        <div class="shade shade--color"></div>
+                        №109 название оттенка
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">
+                            <!-- SVG для пустого бокса -->
+                            <svg class="box" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="16" height="16" rx="4.5"/>
+                            </svg>
+                            <!-- SVG для галочки, отображается только когда чекбокс активен -->
+                            <svg class="checkmark-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 5.64879L9.4668 0.382812L10.2682 1.1842L4.20082 7.25156L0.966797 4.01753L1.76818 3.21615L4.20082 5.64879Z" fill="black"/>
+                            </svg>
+                        </span>
+                        <div class="shade shade--color"></div>
+                        №109 название оттенка
+                    </label>
+                    <button class="apply-button">Применить</button>
+                </div>
+            </div>
+    
+            <!-- Кнопка "Серия" -->
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    Серия
+                    <span class="arrow"><svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.4135 0.994291L7.80288 7.00391L1.1923 0.994291"  stroke-width="1.74072" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></span>
+                </button>
+                <div class="dropdown-content correct-position-content">
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">
+                            <!-- SVG для пустого бокса -->
+                            <svg class="box" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="16" height="16" rx="4.5" />
+                            </svg>
+                            <!-- SVG для галочки, отображается только когда чекбокс активен -->
+                            <svg class="checkmark-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 5.64879L9.4668 0.382812L10.2682 1.1842L4.20082 7.25156L0.966797 4.01753L1.76818 3.21615L4.20082 5.64879Z" fill="black"/>
+                            </svg>
+                        </span>
+                       Серия 1
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">
+                            <!-- SVG для пустого бокса -->
+                            <svg class="box" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="16" height="16" rx="4.5" />
+                            </svg>
+                            <!-- SVG для галочки, отображается только когда чекбокс активен -->
+                            <svg class="checkmark-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 5.64879L9.4668 0.382812L10.2682 1.1842L4.20082 7.25156L0.966797 4.01753L1.76818 3.21615L4.20082 5.64879Z" fill="black"/>
+                            </svg>
+                        </span>
+                       Серия 2
+                    </label>
+                    <button class="apply-button">Применить</button>
+                </div>
+            </div>
+    
+            <!-- Кнопка "Текстура" -->
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    Текстура
+                    <span class="arrow"><svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.4135 0.994291L7.80288 7.00391L1.1923 0.994291"  stroke-width="1.74072" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></span>
+                </button>
+                <div class="dropdown-content correct-position-content">
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">
+                            <!-- SVG для пустого бокса -->
+                            <svg class="box" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="16" height="16" rx="4.5" />
+                            </svg>
+                            <!-- SVG для галочки, отображается только когда чекбокс активен -->
+                            <svg class="checkmark-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 5.64879L9.4668 0.382812L10.2682 1.1842L4.20082 7.25156L0.966797 4.01753L1.76818 3.21615L4.20082 5.64879Z" fill="black"/>
+                            </svg>
+                        </span>
+                       Матовая
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">
+                            <!-- SVG для пустого бокса -->
+                            <svg class="box" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="16" height="16" rx="4.5" />
+                            </svg>
+                            <!-- SVG для галочки, отображается только когда чекбокс активен -->
+                            <svg class="checkmark-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 5.64879L9.4668 0.382812L10.2682 1.1842L4.20082 7.25156L0.966797 4.01753L1.76818 3.21615L4.20082 5.64879Z" fill="black"/>
+                            </svg>
+                        </span>
+                       Глянцевая
+                    </label>
+                    <button class="apply-button">Применить</button>
+                </div>
+            </div>
+    
+            <!-- Кнопка "Цена" с двойным слайдером -->
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    Цена
+                    <span class="arrow"><svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.4135 0.994291L7.80288 7.00391L1.1923 0.994291"  stroke-width="1.74072" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></span>
+                </button>
+                <div class="dropdown-content price-slider correct-position-content">
+                    <input type="range" min="0" max="5000" value="300" id="minPrice">
+                    <input type="range" min="0" max="5000" value="3000" id="maxPrice">
+                    <div class="price-container">
+
+                        <input type="number" id="minPriceInput" value="300">
+                        <input type="number" id="maxPriceInput" value="3000">
+                    </div>
+                    <button class="apply-button">Подтвердить</button>
+                </div>
+            </div>
+    
+            <!-- Кнопка "Сортировать по" -->
+            <div class="dropdown">
+                <button class="dropdown-button">
+                    Сортировать по:
+                    <span class="arrow"><svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.4135 0.994291L7.80288 7.00391L1.1923 0.994291"  stroke-width="1.74072" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></span>
+                </button>
+                <div class="dropdown-content correct-position-content">
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">
+                            <!-- SVG для пустого бокса -->
+                            <svg class="box" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="16" height="16" rx="4.5" />
+                            </svg>
+                            <!-- SVG для галочки, отображается только когда чекбокс активен -->
+                            <svg class="checkmark-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 5.64879L9.4668 0.382812L10.2682 1.1842L4.20082 7.25156L0.966797 4.01753L1.76818 3.21615L4.20082 5.64879Z" fill="black"/>
+                            </svg>
+                        </span>
+                       Новизне
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">
+                            <!-- SVG для пустого бокса -->
+                            <svg class="box" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" y="0.5" width="16" height="16" rx="4.5" />
+                            </svg>
+                            <!-- SVG для галочки, отображается только когда чекбокс активен -->
+                            <svg class="checkmark-icon" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.20082 5.64879L9.4668 0.382812L10.2682 1.1842L4.20082 7.25156L0.966797 4.01753L1.76818 3.21615L4.20082 5.64879Z" fill="black"/>
+                            </svg>
+                        </span>
+                       Популярности
+                    </label>
+                    <button class="apply-button">Применить</button>
+                </div>
+                
+            </div>
+            <button id="button-apply-filtr" class="none ">Приминить фильтр</button>
+        </div>
+        <button id="button-apply-filtr" class="none ">Приминить фильтр</button>
+        
+    </div>
+    </section>
+    
+    <section>
+    <div class="catalog">
+        <div class="catalog__card-other">
+            <div class="sale"><svg  viewBox="0 0 56 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="54" height="21.8933" rx="10.9467" stroke="#D866A3" stroke-width="2"/>
+                <path d="M18.6953 10.4678C18.6465 10.419 18.5559 10.3528 18.4235 10.2692C18.2981 10.1855 18.1413 10.1054 17.9531 10.0287C17.7719 9.95207 17.5733 9.88586 17.3573 9.83011C17.1412 9.76739 16.9217 9.73603 16.6987 9.73603C16.3085 9.73603 16.0123 9.80921 15.8102 9.95555C15.6151 10.1019 15.5175 10.3075 15.5175 10.5723C15.5175 10.7744 15.5802 10.9347 15.7057 11.0532C15.8311 11.1716 16.0193 11.2727 16.2701 11.3563C16.521 11.4399 16.8346 11.5305 17.2109 11.6281C17.6988 11.7466 18.1204 11.8929 18.4758 12.0671C18.8382 12.2344 19.1134 12.4574 19.3016 12.7361C19.4967 13.0079 19.5943 13.3703 19.5943 13.8233C19.5943 14.2205 19.5211 14.562 19.3748 14.8477C19.2284 15.1265 19.0263 15.353 18.7685 15.5272C18.5106 15.7014 18.2179 15.8303 17.8904 15.914C17.5629 15.9906 17.2144 16.0289 16.8451 16.0289C16.4757 16.0289 16.1064 15.9906 15.737 15.914C15.3677 15.8373 15.0122 15.7293 14.6708 15.5899C14.3293 15.4436 14.0157 15.2693 13.73 15.0672L14.3676 13.8233C14.4303 13.886 14.5418 13.9696 14.7021 14.0742C14.8624 14.1717 15.0575 14.2728 15.2875 14.3773C15.5175 14.4749 15.7684 14.5585 16.0402 14.6282C16.3119 14.6979 16.5872 14.7327 16.866 14.7327C17.2562 14.7327 17.5524 14.6665 17.7545 14.5341C17.9566 14.4017 18.0577 14.2135 18.0577 13.9696C18.0577 13.7466 17.9775 13.5724 17.8172 13.447C17.6569 13.3215 17.4339 13.2135 17.1482 13.1229C16.8625 13.0253 16.5245 12.9208 16.1342 12.8093C15.6673 12.6769 15.2771 12.5306 14.9635 12.3703C14.6499 12.203 14.4164 11.994 14.2631 11.7431C14.1098 11.4922 14.0331 11.1786 14.0331 10.8023C14.0331 10.2935 14.1516 9.86844 14.3885 9.52697C14.6324 9.17852 14.96 8.91719 15.3711 8.74297C15.7823 8.56177 16.2388 8.47118 16.7405 8.47118C17.089 8.47118 17.4165 8.50951 17.7231 8.58617C18.0367 8.66282 18.3294 8.76387 18.6012 8.88931C18.873 9.01475 19.1169 9.15065 19.333 9.29699L18.6953 10.4678ZM23.5839 8.52345H25.0473L27.7757 15.9453H26.2913L25.6014 14.0951H23.0089L22.3295 15.9453H20.8451L23.5839 8.52345ZM25.34 13.0811L24.3156 10.0183L23.2494 13.0811H25.34ZM29.635 15.9453V8.52345H31.0776V14.6805H34.8617V15.9453H29.635ZM41.9385 14.6805V15.9453H36.785V8.52345H41.8444V9.7883H38.2275V11.5758H41.3531V12.7466H38.2275V14.6805H41.9385Z" fill="#D866A3"/>
+                </svg></div>
+                
+            <a class="favorities-button" href="#"><svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0625 6.53724C0.0625 3.16163 3.02393 0.5625 6.5 0.5625C8.29184 0.5625 9.86855 1.40267 11 2.48979C12.1314 1.40267 13.7082 0.5625 15.5 0.5625C18.9761 0.5625 21.9375 3.16163 21.9375 6.53724C21.9375 8.84958 20.9514 10.8831 19.5852 12.6019C18.2214 14.3178 16.4374 15.7741 14.7293 16.9575C14.0769 17.4094 13.4169 17.8264 12.8128 18.134C12.2456 18.4229 11.5934 18.6875 11 18.6875C10.4066 18.6875 9.75437 18.4229 9.18716 18.134C8.5831 17.8264 7.92308 17.4094 7.27067 16.9575C5.56256 15.7741 3.77859 14.3178 2.41478 12.6019C1.0486 10.8831 0.0625 8.84959 0.0625 6.53724ZM6.5 2.4375C3.90094 2.4375 1.9375 4.34887 1.9375 6.53724C1.9375 8.29162 2.68223 9.925 3.88261 11.4353C5.08535 12.9485 6.70365 14.2837 8.33843 15.4162C8.95702 15.8447 9.53968 16.2094 10.0381 16.4632C10.5733 16.7358 10.8833 16.8125 11 16.8125C11.1167 16.8125 11.4267 16.7358 11.9619 16.4632C12.4603 16.2094 13.043 15.8447 13.6616 15.4162C15.2963 14.2837 16.9146 12.9485 18.1174 11.4353C19.3178 9.925 20.0625 8.29161 20.0625 6.53724C20.0625 4.34887 18.0991 2.4375 15.5 2.4375C14.0073 2.4375 12.6135 3.32928 11.7432 4.46115C11.5657 4.69195 11.2911 4.82721 11 4.82721C10.7089 4.82721 10.4343 4.69195 10.2568 4.46115C9.38651 3.32928 7.99269 2.4375 6.5 2.4375Z" fill="#4D4D4D"/>
+                </svg>
+                </a>
+                <img src="image/photo_card.png" alt="">
+            <div class="card__container">
+                <p class="card__dialog">Пигмент для глаз</p>
+                <h2 class="card__title">Loose Eyeshadow 
+                    Pigment</h2>
+                <div class="price-container">
+                    <p class="card__price">990 ₽</p>
+                    <div class="button-container1">
+                        <button class="icon-button">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1477 3.25H4.33514L3.15497 1.1346C3.0225 0.897154 2.7719 0.75 2.5 0.75H1C0.585786 0.75 0.25 1.08579 0.25 1.5C0.25 1.91421 0.585786 2.25 1 2.25H2.0596L3.22429 4.33765L5.91037 10.2809L5.91312 10.2869L6.14971 10.8104L3.45287 13.687C3.25895 13.8939 3.19825 14.1924 3.29599 14.4585C3.39372 14.7247 3.63317 14.913 3.91486 14.9452L6.37299 15.2261C9.44767 15.5775 12.5524 15.5775 15.627 15.2261L18.0852 14.9452C18.4967 14.8981 18.7922 14.5264 18.7452 14.1148C18.6981 13.7033 18.3264 13.4078 17.9149 13.4549L15.4567 13.7358C12.4952 14.0742 9.50481 14.0742 6.54331 13.7358L5.56779 13.6243L7.54717 11.513C7.56632 11.4925 7.5841 11.4713 7.60052 11.4494L8.35334 11.5474C9.40826 11.6847 10.4746 11.7116 11.5351 11.6277C14.0086 11.4321 16.301 10.2551 17.9015 8.35907L18.4795 7.67425C18.499 7.65125 18.517 7.62711 18.5335 7.60194L19.6109 5.96009C20.3745 4.79633 19.5397 3.25 18.1477 3.25ZM7.65627 9.94405C7.49086 9.92253 7.34823 9.81745 7.27858 9.66604L7.27725 9.66311L5.05674 4.75H18.1477C18.3466 4.75 18.4658 4.9709 18.3567 5.13716L17.3042 6.74123L16.7552 7.39152C15.4132 8.98139 13.4909 9.96832 11.4169 10.1324C10.4603 10.208 9.49842 10.1837 8.54688 10.0599L7.65627 9.94405Z" fill="white"/>
+                                <path d="M5.5 16.5C4.67157 16.5 4 17.1716 4 18C4 18.8284 4.67157 19.5 5.5 19.5C6.32843 19.5 7 18.8284 7 18C7 17.1716 6.32843 16.5 5.5 16.5Z" fill="white"/>
+                                <path d="M15 18C15 17.1716 15.6716 16.5 16.5 16.5C17.3284 16.5 18 17.1716 18 18C18 18.8284 17.3284 19.5 16.5 19.5C15.6716 19.5 15 18.8284 15 18Z" fill="white"/>
+                            </svg> 
+                        </button>
+                    </div>
+                </div>  
+            </div>
+        </div>
+
+        <div class="catalog__card-other catalog__card">
+            <div class="sale"><svg  viewBox="0 0 56 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="54" height="21.8933" rx="10.9467" stroke="#D866A3" stroke-width="2"/>
+                <path d="M18.6953 10.4678C18.6465 10.419 18.5559 10.3528 18.4235 10.2692C18.2981 10.1855 18.1413 10.1054 17.9531 10.0287C17.7719 9.95207 17.5733 9.88586 17.3573 9.83011C17.1412 9.76739 16.9217 9.73603 16.6987 9.73603C16.3085 9.73603 16.0123 9.80921 15.8102 9.95555C15.6151 10.1019 15.5175 10.3075 15.5175 10.5723C15.5175 10.7744 15.5802 10.9347 15.7057 11.0532C15.8311 11.1716 16.0193 11.2727 16.2701 11.3563C16.521 11.4399 16.8346 11.5305 17.2109 11.6281C17.6988 11.7466 18.1204 11.8929 18.4758 12.0671C18.8382 12.2344 19.1134 12.4574 19.3016 12.7361C19.4967 13.0079 19.5943 13.3703 19.5943 13.8233C19.5943 14.2205 19.5211 14.562 19.3748 14.8477C19.2284 15.1265 19.0263 15.353 18.7685 15.5272C18.5106 15.7014 18.2179 15.8303 17.8904 15.914C17.5629 15.9906 17.2144 16.0289 16.8451 16.0289C16.4757 16.0289 16.1064 15.9906 15.737 15.914C15.3677 15.8373 15.0122 15.7293 14.6708 15.5899C14.3293 15.4436 14.0157 15.2693 13.73 15.0672L14.3676 13.8233C14.4303 13.886 14.5418 13.9696 14.7021 14.0742C14.8624 14.1717 15.0575 14.2728 15.2875 14.3773C15.5175 14.4749 15.7684 14.5585 16.0402 14.6282C16.3119 14.6979 16.5872 14.7327 16.866 14.7327C17.2562 14.7327 17.5524 14.6665 17.7545 14.5341C17.9566 14.4017 18.0577 14.2135 18.0577 13.9696C18.0577 13.7466 17.9775 13.5724 17.8172 13.447C17.6569 13.3215 17.4339 13.2135 17.1482 13.1229C16.8625 13.0253 16.5245 12.9208 16.1342 12.8093C15.6673 12.6769 15.2771 12.5306 14.9635 12.3703C14.6499 12.203 14.4164 11.994 14.2631 11.7431C14.1098 11.4922 14.0331 11.1786 14.0331 10.8023C14.0331 10.2935 14.1516 9.86844 14.3885 9.52697C14.6324 9.17852 14.96 8.91719 15.3711 8.74297C15.7823 8.56177 16.2388 8.47118 16.7405 8.47118C17.089 8.47118 17.4165 8.50951 17.7231 8.58617C18.0367 8.66282 18.3294 8.76387 18.6012 8.88931C18.873 9.01475 19.1169 9.15065 19.333 9.29699L18.6953 10.4678ZM23.5839 8.52345H25.0473L27.7757 15.9453H26.2913L25.6014 14.0951H23.0089L22.3295 15.9453H20.8451L23.5839 8.52345ZM25.34 13.0811L24.3156 10.0183L23.2494 13.0811H25.34ZM29.635 15.9453V8.52345H31.0776V14.6805H34.8617V15.9453H29.635ZM41.9385 14.6805V15.9453H36.785V8.52345H41.8444V9.7883H38.2275V11.5758H41.3531V12.7466H38.2275V14.6805H41.9385Z" fill="#D866A3"/>
+                </svg></div>
+            <a class="favorities-button" href="#"><svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0625 6.53724C0.0625 3.16163 3.02393 0.5625 6.5 0.5625C8.29184 0.5625 9.86855 1.40267 11 2.48979C12.1314 1.40267 13.7082 0.5625 15.5 0.5625C18.9761 0.5625 21.9375 3.16163 21.9375 6.53724C21.9375 8.84958 20.9514 10.8831 19.5852 12.6019C18.2214 14.3178 16.4374 15.7741 14.7293 16.9575C14.0769 17.4094 13.4169 17.8264 12.8128 18.134C12.2456 18.4229 11.5934 18.6875 11 18.6875C10.4066 18.6875 9.75437 18.4229 9.18716 18.134C8.5831 17.8264 7.92308 17.4094 7.27067 16.9575C5.56256 15.7741 3.77859 14.3178 2.41478 12.6019C1.0486 10.8831 0.0625 8.84959 0.0625 6.53724ZM6.5 2.4375C3.90094 2.4375 1.9375 4.34887 1.9375 6.53724C1.9375 8.29162 2.68223 9.925 3.88261 11.4353C5.08535 12.9485 6.70365 14.2837 8.33843 15.4162C8.95702 15.8447 9.53968 16.2094 10.0381 16.4632C10.5733 16.7358 10.8833 16.8125 11 16.8125C11.1167 16.8125 11.4267 16.7358 11.9619 16.4632C12.4603 16.2094 13.043 15.8447 13.6616 15.4162C15.2963 14.2837 16.9146 12.9485 18.1174 11.4353C19.3178 9.925 20.0625 8.29161 20.0625 6.53724C20.0625 4.34887 18.0991 2.4375 15.5 2.4375C14.0073 2.4375 12.6135 3.32928 11.7432 4.46115C11.5657 4.69195 11.2911 4.82721 11 4.82721C10.7089 4.82721 10.4343 4.69195 10.2568 4.46115C9.38651 3.32928 7.99269 2.4375 6.5 2.4375Z" fill="#4D4D4D"/>
+                </svg>
+            </a>
+            <img src="image/1717471903665e8a9fa626d6.59049191_540_760_inset.png" alt="">
+            <div class="card__container">
+                <p class="card__dialog">Пигмент для глаз</p>
+                <h2 class="card__title">Loose Eyeshadow 
+                    Pigment</h2>
+                <div class="price-container">
+                    <p class="card__price">990 ₽</p>
+                    <div class="button-container1">
+                        <button class="icon-button">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1477 3.25H4.33514L3.15497 1.1346C3.0225 0.897154 2.7719 0.75 2.5 0.75H1C0.585786 0.75 0.25 1.08579 0.25 1.5C0.25 1.91421 0.585786 2.25 1 2.25H2.0596L3.22429 4.33765L5.91037 10.2809L5.91312 10.2869L6.14971 10.8104L3.45287 13.687C3.25895 13.8939 3.19825 14.1924 3.29599 14.4585C3.39372 14.7247 3.63317 14.913 3.91486 14.9452L6.37299 15.2261C9.44767 15.5775 12.5524 15.5775 15.627 15.2261L18.0852 14.9452C18.4967 14.8981 18.7922 14.5264 18.7452 14.1148C18.6981 13.7033 18.3264 13.4078 17.9149 13.4549L15.4567 13.7358C12.4952 14.0742 9.50481 14.0742 6.54331 13.7358L5.56779 13.6243L7.54717 11.513C7.56632 11.4925 7.5841 11.4713 7.60052 11.4494L8.35334 11.5474C9.40826 11.6847 10.4746 11.7116 11.5351 11.6277C14.0086 11.4321 16.301 10.2551 17.9015 8.35907L18.4795 7.67425C18.499 7.65125 18.517 7.62711 18.5335 7.60194L19.6109 5.96009C20.3745 4.79633 19.5397 3.25 18.1477 3.25ZM7.65627 9.94405C7.49086 9.92253 7.34823 9.81745 7.27858 9.66604L7.27725 9.66311L5.05674 4.75H18.1477C18.3466 4.75 18.4658 4.9709 18.3567 5.13716L17.3042 6.74123L16.7552 7.39152C15.4132 8.98139 13.4909 9.96832 11.4169 10.1324C10.4603 10.208 9.49842 10.1837 8.54688 10.0599L7.65627 9.94405Z" fill="white"/>
+                                <path d="M5.5 16.5C4.67157 16.5 4 17.1716 4 18C4 18.8284 4.67157 19.5 5.5 19.5C6.32843 19.5 7 18.8284 7 18C7 17.1716 6.32843 16.5 5.5 16.5Z" fill="white"/>
+                                <path d="M15 18C15 17.1716 15.6716 16.5 16.5 16.5C17.3284 16.5 18 17.1716 18 18C18 18.8284 17.3284 19.5 16.5 19.5C15.6716 19.5 15 18.8284 15 18Z" fill="white"/>
+                            </svg> 
+                        </button>
+                    </div>
+                </div>  
+            </div>
+
+        </div>
+        <div class="catalog__card-other catalog__card">
+            <a class="favorities-button" href="#"><svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0625 6.53724C0.0625 3.16163 3.02393 0.5625 6.5 0.5625C8.29184 0.5625 9.86855 1.40267 11 2.48979C12.1314 1.40267 13.7082 0.5625 15.5 0.5625C18.9761 0.5625 21.9375 3.16163 21.9375 6.53724C21.9375 8.84958 20.9514 10.8831 19.5852 12.6019C18.2214 14.3178 16.4374 15.7741 14.7293 16.9575C14.0769 17.4094 13.4169 17.8264 12.8128 18.134C12.2456 18.4229 11.5934 18.6875 11 18.6875C10.4066 18.6875 9.75437 18.4229 9.18716 18.134C8.5831 17.8264 7.92308 17.4094 7.27067 16.9575C5.56256 15.7741 3.77859 14.3178 2.41478 12.6019C1.0486 10.8831 0.0625 8.84959 0.0625 6.53724ZM6.5 2.4375C3.90094 2.4375 1.9375 4.34887 1.9375 6.53724C1.9375 8.29162 2.68223 9.925 3.88261 11.4353C5.08535 12.9485 6.70365 14.2837 8.33843 15.4162C8.95702 15.8447 9.53968 16.2094 10.0381 16.4632C10.5733 16.7358 10.8833 16.8125 11 16.8125C11.1167 16.8125 11.4267 16.7358 11.9619 16.4632C12.4603 16.2094 13.043 15.8447 13.6616 15.4162C15.2963 14.2837 16.9146 12.9485 18.1174 11.4353C19.3178 9.925 20.0625 8.29161 20.0625 6.53724C20.0625 4.34887 18.0991 2.4375 15.5 2.4375C14.0073 2.4375 12.6135 3.32928 11.7432 4.46115C11.5657 4.69195 11.2911 4.82721 11 4.82721C10.7089 4.82721 10.4343 4.69195 10.2568 4.46115C9.38651 3.32928 7.99269 2.4375 6.5 2.4375Z" fill="#4D4D4D"/>
+                </svg>
+            </a>
+            <img src="image/1717471903665e8a9fa626d6.59049191_540_760_inset.png" alt="">
+            <div class="card__container">
+                <p class="card__dialog">Пигмент для глаз</p>
+                <h2 class="card__title">Loose Eyeshadow 
+                    Pigment</h2>
+                <div class="price-container">
+                    <p class="card__price">990 ₽</p>
+                    <div class="button-container1">
+                        <button class="icon-button">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1477 3.25H4.33514L3.15497 1.1346C3.0225 0.897154 2.7719 0.75 2.5 0.75H1C0.585786 0.75 0.25 1.08579 0.25 1.5C0.25 1.91421 0.585786 2.25 1 2.25H2.0596L3.22429 4.33765L5.91037 10.2809L5.91312 10.2869L6.14971 10.8104L3.45287 13.687C3.25895 13.8939 3.19825 14.1924 3.29599 14.4585C3.39372 14.7247 3.63317 14.913 3.91486 14.9452L6.37299 15.2261C9.44767 15.5775 12.5524 15.5775 15.627 15.2261L18.0852 14.9452C18.4967 14.8981 18.7922 14.5264 18.7452 14.1148C18.6981 13.7033 18.3264 13.4078 17.9149 13.4549L15.4567 13.7358C12.4952 14.0742 9.50481 14.0742 6.54331 13.7358L5.56779 13.6243L7.54717 11.513C7.56632 11.4925 7.5841 11.4713 7.60052 11.4494L8.35334 11.5474C9.40826 11.6847 10.4746 11.7116 11.5351 11.6277C14.0086 11.4321 16.301 10.2551 17.9015 8.35907L18.4795 7.67425C18.499 7.65125 18.517 7.62711 18.5335 7.60194L19.6109 5.96009C20.3745 4.79633 19.5397 3.25 18.1477 3.25ZM7.65627 9.94405C7.49086 9.92253 7.34823 9.81745 7.27858 9.66604L7.27725 9.66311L5.05674 4.75H18.1477C18.3466 4.75 18.4658 4.9709 18.3567 5.13716L17.3042 6.74123L16.7552 7.39152C15.4132 8.98139 13.4909 9.96832 11.4169 10.1324C10.4603 10.208 9.49842 10.1837 8.54688 10.0599L7.65627 9.94405Z" fill="white"/>
+                                <path d="M5.5 16.5C4.67157 16.5 4 17.1716 4 18C4 18.8284 4.67157 19.5 5.5 19.5C6.32843 19.5 7 18.8284 7 18C7 17.1716 6.32843 16.5 5.5 16.5Z" fill="white"/>
+                                <path d="M15 18C15 17.1716 15.6716 16.5 16.5 16.5C17.3284 16.5 18 17.1716 18 18C18 18.8284 17.3284 19.5 16.5 19.5C15.6716 19.5 15 18.8284 15 18Z" fill="white"/>
+                            </svg> 
+                        </button>
+                    </div>
+                </div>  
+            </div>
+
+        </div>
+        <div class="catalog__card-other catalog__card">
+            <a class="favorities-button" href="#"><svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0625 6.53724C0.0625 3.16163 3.02393 0.5625 6.5 0.5625C8.29184 0.5625 9.86855 1.40267 11 2.48979C12.1314 1.40267 13.7082 0.5625 15.5 0.5625C18.9761 0.5625 21.9375 3.16163 21.9375 6.53724C21.9375 8.84958 20.9514 10.8831 19.5852 12.6019C18.2214 14.3178 16.4374 15.7741 14.7293 16.9575C14.0769 17.4094 13.4169 17.8264 12.8128 18.134C12.2456 18.4229 11.5934 18.6875 11 18.6875C10.4066 18.6875 9.75437 18.4229 9.18716 18.134C8.5831 17.8264 7.92308 17.4094 7.27067 16.9575C5.56256 15.7741 3.77859 14.3178 2.41478 12.6019C1.0486 10.8831 0.0625 8.84959 0.0625 6.53724ZM6.5 2.4375C3.90094 2.4375 1.9375 4.34887 1.9375 6.53724C1.9375 8.29162 2.68223 9.925 3.88261 11.4353C5.08535 12.9485 6.70365 14.2837 8.33843 15.4162C8.95702 15.8447 9.53968 16.2094 10.0381 16.4632C10.5733 16.7358 10.8833 16.8125 11 16.8125C11.1167 16.8125 11.4267 16.7358 11.9619 16.4632C12.4603 16.2094 13.043 15.8447 13.6616 15.4162C15.2963 14.2837 16.9146 12.9485 18.1174 11.4353C19.3178 9.925 20.0625 8.29161 20.0625 6.53724C20.0625 4.34887 18.0991 2.4375 15.5 2.4375C14.0073 2.4375 12.6135 3.32928 11.7432 4.46115C11.5657 4.69195 11.2911 4.82721 11 4.82721C10.7089 4.82721 10.4343 4.69195 10.2568 4.46115C9.38651 3.32928 7.99269 2.4375 6.5 2.4375Z" fill="#4D4D4D"/>
+                </svg>
+            </a>
+            <img src="image/1717471903665e8a9fa626d6.59049191_540_760_inset.png" alt="">
+            <div class="card__container">
+                <p class="card__dialog">Пигмент для глаз</p>
+                <h2 class="card__title">Loose Eyeshadow 
+                    Pigment</h2>
+                <div class="price-container">
+                    <p class="card__price">990 ₽</p>
+                    <div class="button-container1">
+                        <button class="icon-button">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1477 3.25H4.33514L3.15497 1.1346C3.0225 0.897154 2.7719 0.75 2.5 0.75H1C0.585786 0.75 0.25 1.08579 0.25 1.5C0.25 1.91421 0.585786 2.25 1 2.25H2.0596L3.22429 4.33765L5.91037 10.2809L5.91312 10.2869L6.14971 10.8104L3.45287 13.687C3.25895 13.8939 3.19825 14.1924 3.29599 14.4585C3.39372 14.7247 3.63317 14.913 3.91486 14.9452L6.37299 15.2261C9.44767 15.5775 12.5524 15.5775 15.627 15.2261L18.0852 14.9452C18.4967 14.8981 18.7922 14.5264 18.7452 14.1148C18.6981 13.7033 18.3264 13.4078 17.9149 13.4549L15.4567 13.7358C12.4952 14.0742 9.50481 14.0742 6.54331 13.7358L5.56779 13.6243L7.54717 11.513C7.56632 11.4925 7.5841 11.4713 7.60052 11.4494L8.35334 11.5474C9.40826 11.6847 10.4746 11.7116 11.5351 11.6277C14.0086 11.4321 16.301 10.2551 17.9015 8.35907L18.4795 7.67425C18.499 7.65125 18.517 7.62711 18.5335 7.60194L19.6109 5.96009C20.3745 4.79633 19.5397 3.25 18.1477 3.25ZM7.65627 9.94405C7.49086 9.92253 7.34823 9.81745 7.27858 9.66604L7.27725 9.66311L5.05674 4.75H18.1477C18.3466 4.75 18.4658 4.9709 18.3567 5.13716L17.3042 6.74123L16.7552 7.39152C15.4132 8.98139 13.4909 9.96832 11.4169 10.1324C10.4603 10.208 9.49842 10.1837 8.54688 10.0599L7.65627 9.94405Z" fill="white"/>
+                                <path d="M5.5 16.5C4.67157 16.5 4 17.1716 4 18C4 18.8284 4.67157 19.5 5.5 19.5C6.32843 19.5 7 18.8284 7 18C7 17.1716 6.32843 16.5 5.5 16.5Z" fill="white"/>
+                                <path d="M15 18C15 17.1716 15.6716 16.5 16.5 16.5C17.3284 16.5 18 17.1716 18 18C18 18.8284 17.3284 19.5 16.5 19.5C15.6716 19.5 15 18.8284 15 18Z" fill="white"/>
+                            </svg> 
+                        </button>
+                    </div>
+                </div>  
+            </div>
+
+        </div>
+        <div class="catalog__card-other">
+            
+            <a class="favorities-button" href="#"><svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0625 6.53724C0.0625 3.16163 3.02393 0.5625 6.5 0.5625C8.29184 0.5625 9.86855 1.40267 11 2.48979C12.1314 1.40267 13.7082 0.5625 15.5 0.5625C18.9761 0.5625 21.9375 3.16163 21.9375 6.53724C21.9375 8.84958 20.9514 10.8831 19.5852 12.6019C18.2214 14.3178 16.4374 15.7741 14.7293 16.9575C14.0769 17.4094 13.4169 17.8264 12.8128 18.134C12.2456 18.4229 11.5934 18.6875 11 18.6875C10.4066 18.6875 9.75437 18.4229 9.18716 18.134C8.5831 17.8264 7.92308 17.4094 7.27067 16.9575C5.56256 15.7741 3.77859 14.3178 2.41478 12.6019C1.0486 10.8831 0.0625 8.84959 0.0625 6.53724ZM6.5 2.4375C3.90094 2.4375 1.9375 4.34887 1.9375 6.53724C1.9375 8.29162 2.68223 9.925 3.88261 11.4353C5.08535 12.9485 6.70365 14.2837 8.33843 15.4162C8.95702 15.8447 9.53968 16.2094 10.0381 16.4632C10.5733 16.7358 10.8833 16.8125 11 16.8125C11.1167 16.8125 11.4267 16.7358 11.9619 16.4632C12.4603 16.2094 13.043 15.8447 13.6616 15.4162C15.2963 14.2837 16.9146 12.9485 18.1174 11.4353C19.3178 9.925 20.0625 8.29161 20.0625 6.53724C20.0625 4.34887 18.0991 2.4375 15.5 2.4375C14.0073 2.4375 12.6135 3.32928 11.7432 4.46115C11.5657 4.69195 11.2911 4.82721 11 4.82721C10.7089 4.82721 10.4343 4.69195 10.2568 4.46115C9.38651 3.32928 7.99269 2.4375 6.5 2.4375Z" fill="#4D4D4D"/>
+                </svg>
+                </a>
+                <img src="image/photo_card.png" alt="">
+            <div class="card__container">
+                <p class="card__dialog">Пигмент для глаз</p>
+                <h2 class="card__title">Loose Eyeshadow 
+                    Pigment</h2>
+                <div class="price-container">
+                    <p class="card__price">990 ₽</p>
+                    <div class="button-container1">
+                        <button class="icon-button">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1477 3.25H4.33514L3.15497 1.1346C3.0225 0.897154 2.7719 0.75 2.5 0.75H1C0.585786 0.75 0.25 1.08579 0.25 1.5C0.25 1.91421 0.585786 2.25 1 2.25H2.0596L3.22429 4.33765L5.91037 10.2809L5.91312 10.2869L6.14971 10.8104L3.45287 13.687C3.25895 13.8939 3.19825 14.1924 3.29599 14.4585C3.39372 14.7247 3.63317 14.913 3.91486 14.9452L6.37299 15.2261C9.44767 15.5775 12.5524 15.5775 15.627 15.2261L18.0852 14.9452C18.4967 14.8981 18.7922 14.5264 18.7452 14.1148C18.6981 13.7033 18.3264 13.4078 17.9149 13.4549L15.4567 13.7358C12.4952 14.0742 9.50481 14.0742 6.54331 13.7358L5.56779 13.6243L7.54717 11.513C7.56632 11.4925 7.5841 11.4713 7.60052 11.4494L8.35334 11.5474C9.40826 11.6847 10.4746 11.7116 11.5351 11.6277C14.0086 11.4321 16.301 10.2551 17.9015 8.35907L18.4795 7.67425C18.499 7.65125 18.517 7.62711 18.5335 7.60194L19.6109 5.96009C20.3745 4.79633 19.5397 3.25 18.1477 3.25ZM7.65627 9.94405C7.49086 9.92253 7.34823 9.81745 7.27858 9.66604L7.27725 9.66311L5.05674 4.75H18.1477C18.3466 4.75 18.4658 4.9709 18.3567 5.13716L17.3042 6.74123L16.7552 7.39152C15.4132 8.98139 13.4909 9.96832 11.4169 10.1324C10.4603 10.208 9.49842 10.1837 8.54688 10.0599L7.65627 9.94405Z" fill="white"/>
+                                <path d="M5.5 16.5C4.67157 16.5 4 17.1716 4 18C4 18.8284 4.67157 19.5 5.5 19.5C6.32843 19.5 7 18.8284 7 18C7 17.1716 6.32843 16.5 5.5 16.5Z" fill="white"/>
+                                <path d="M15 18C15 17.1716 15.6716 16.5 16.5 16.5C17.3284 16.5 18 17.1716 18 18C18 18.8284 17.3284 19.5 16.5 19.5C15.6716 19.5 15 18.8284 15 18Z" fill="white"/>
+                            </svg> 
+                        </button>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="catalog__card-other">
+            
+                
+            <a class="favorities-button" href="#"><svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0625 6.53724C0.0625 3.16163 3.02393 0.5625 6.5 0.5625C8.29184 0.5625 9.86855 1.40267 11 2.48979C12.1314 1.40267 13.7082 0.5625 15.5 0.5625C18.9761 0.5625 21.9375 3.16163 21.9375 6.53724C21.9375 8.84958 20.9514 10.8831 19.5852 12.6019C18.2214 14.3178 16.4374 15.7741 14.7293 16.9575C14.0769 17.4094 13.4169 17.8264 12.8128 18.134C12.2456 18.4229 11.5934 18.6875 11 18.6875C10.4066 18.6875 9.75437 18.4229 9.18716 18.134C8.5831 17.8264 7.92308 17.4094 7.27067 16.9575C5.56256 15.7741 3.77859 14.3178 2.41478 12.6019C1.0486 10.8831 0.0625 8.84959 0.0625 6.53724ZM6.5 2.4375C3.90094 2.4375 1.9375 4.34887 1.9375 6.53724C1.9375 8.29162 2.68223 9.925 3.88261 11.4353C5.08535 12.9485 6.70365 14.2837 8.33843 15.4162C8.95702 15.8447 9.53968 16.2094 10.0381 16.4632C10.5733 16.7358 10.8833 16.8125 11 16.8125C11.1167 16.8125 11.4267 16.7358 11.9619 16.4632C12.4603 16.2094 13.043 15.8447 13.6616 15.4162C15.2963 14.2837 16.9146 12.9485 18.1174 11.4353C19.3178 9.925 20.0625 8.29161 20.0625 6.53724C20.0625 4.34887 18.0991 2.4375 15.5 2.4375C14.0073 2.4375 12.6135 3.32928 11.7432 4.46115C11.5657 4.69195 11.2911 4.82721 11 4.82721C10.7089 4.82721 10.4343 4.69195 10.2568 4.46115C9.38651 3.32928 7.99269 2.4375 6.5 2.4375Z" fill="#4D4D4D"/>
+                </svg>
+                </a>
+                <img src="image/photo_card.png" alt="">
+            <div class="card__container">
+                <p class="card__dialog">Пигмент для глаз</p>
+                <h2 class="card__title">Loose Eyeshadow 
+                    Pigment</h2>
+                <div class="price-container">
+                    <p class="card__price">990 ₽</p>
+                    <div class="button-container1">
+                        <button class="icon-button">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1477 3.25H4.33514L3.15497 1.1346C3.0225 0.897154 2.7719 0.75 2.5 0.75H1C0.585786 0.75 0.25 1.08579 0.25 1.5C0.25 1.91421 0.585786 2.25 1 2.25H2.0596L3.22429 4.33765L5.91037 10.2809L5.91312 10.2869L6.14971 10.8104L3.45287 13.687C3.25895 13.8939 3.19825 14.1924 3.29599 14.4585C3.39372 14.7247 3.63317 14.913 3.91486 14.9452L6.37299 15.2261C9.44767 15.5775 12.5524 15.5775 15.627 15.2261L18.0852 14.9452C18.4967 14.8981 18.7922 14.5264 18.7452 14.1148C18.6981 13.7033 18.3264 13.4078 17.9149 13.4549L15.4567 13.7358C12.4952 14.0742 9.50481 14.0742 6.54331 13.7358L5.56779 13.6243L7.54717 11.513C7.56632 11.4925 7.5841 11.4713 7.60052 11.4494L8.35334 11.5474C9.40826 11.6847 10.4746 11.7116 11.5351 11.6277C14.0086 11.4321 16.301 10.2551 17.9015 8.35907L18.4795 7.67425C18.499 7.65125 18.517 7.62711 18.5335 7.60194L19.6109 5.96009C20.3745 4.79633 19.5397 3.25 18.1477 3.25ZM7.65627 9.94405C7.49086 9.92253 7.34823 9.81745 7.27858 9.66604L7.27725 9.66311L5.05674 4.75H18.1477C18.3466 4.75 18.4658 4.9709 18.3567 5.13716L17.3042 6.74123L16.7552 7.39152C15.4132 8.98139 13.4909 9.96832 11.4169 10.1324C10.4603 10.208 9.49842 10.1837 8.54688 10.0599L7.65627 9.94405Z" fill="white"/>
+                                <path d="M5.5 16.5C4.67157 16.5 4 17.1716 4 18C4 18.8284 4.67157 19.5 5.5 19.5C6.32843 19.5 7 18.8284 7 18C7 17.1716 6.32843 16.5 5.5 16.5Z" fill="white"/>
+                                <path d="M15 18C15 17.1716 15.6716 16.5 16.5 16.5C17.3284 16.5 18 17.1716 18 18C18 18.8284 17.3284 19.5 16.5 19.5C15.6716 19.5 15 18.8284 15 18Z" fill="white"/>
+                            </svg> 
+                        </button>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="catalog__card-other">
+           
+            <a class="favorities-button" href="#"><svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0625 6.53724C0.0625 3.16163 3.02393 0.5625 6.5 0.5625C8.29184 0.5625 9.86855 1.40267 11 2.48979C12.1314 1.40267 13.7082 0.5625 15.5 0.5625C18.9761 0.5625 21.9375 3.16163 21.9375 6.53724C21.9375 8.84958 20.9514 10.8831 19.5852 12.6019C18.2214 14.3178 16.4374 15.7741 14.7293 16.9575C14.0769 17.4094 13.4169 17.8264 12.8128 18.134C12.2456 18.4229 11.5934 18.6875 11 18.6875C10.4066 18.6875 9.75437 18.4229 9.18716 18.134C8.5831 17.8264 7.92308 17.4094 7.27067 16.9575C5.56256 15.7741 3.77859 14.3178 2.41478 12.6019C1.0486 10.8831 0.0625 8.84959 0.0625 6.53724ZM6.5 2.4375C3.90094 2.4375 1.9375 4.34887 1.9375 6.53724C1.9375 8.29162 2.68223 9.925 3.88261 11.4353C5.08535 12.9485 6.70365 14.2837 8.33843 15.4162C8.95702 15.8447 9.53968 16.2094 10.0381 16.4632C10.5733 16.7358 10.8833 16.8125 11 16.8125C11.1167 16.8125 11.4267 16.7358 11.9619 16.4632C12.4603 16.2094 13.043 15.8447 13.6616 15.4162C15.2963 14.2837 16.9146 12.9485 18.1174 11.4353C19.3178 9.925 20.0625 8.29161 20.0625 6.53724C20.0625 4.34887 18.0991 2.4375 15.5 2.4375C14.0073 2.4375 12.6135 3.32928 11.7432 4.46115C11.5657 4.69195 11.2911 4.82721 11 4.82721C10.7089 4.82721 10.4343 4.69195 10.2568 4.46115C9.38651 3.32928 7.99269 2.4375 6.5 2.4375Z" fill="#4D4D4D"/>
+                </svg>
+                </a>
+                <img src="image/photo_card.png" alt="">
+            <div class="card__container">
+                <p class="card__dialog">Пигмент для глаз</p>
+                <h2 class="card__title">Loose Eyeshadow 
+                    Pigment</h2>
+                <div class="price-container">
+                    <p class="card__price">990 ₽</p>
+                    <div class="button-container1">
+                        <button class="icon-button">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1477 3.25H4.33514L3.15497 1.1346C3.0225 0.897154 2.7719 0.75 2.5 0.75H1C0.585786 0.75 0.25 1.08579 0.25 1.5C0.25 1.91421 0.585786 2.25 1 2.25H2.0596L3.22429 4.33765L5.91037 10.2809L5.91312 10.2869L6.14971 10.8104L3.45287 13.687C3.25895 13.8939 3.19825 14.1924 3.29599 14.4585C3.39372 14.7247 3.63317 14.913 3.91486 14.9452L6.37299 15.2261C9.44767 15.5775 12.5524 15.5775 15.627 15.2261L18.0852 14.9452C18.4967 14.8981 18.7922 14.5264 18.7452 14.1148C18.6981 13.7033 18.3264 13.4078 17.9149 13.4549L15.4567 13.7358C12.4952 14.0742 9.50481 14.0742 6.54331 13.7358L5.56779 13.6243L7.54717 11.513C7.56632 11.4925 7.5841 11.4713 7.60052 11.4494L8.35334 11.5474C9.40826 11.6847 10.4746 11.7116 11.5351 11.6277C14.0086 11.4321 16.301 10.2551 17.9015 8.35907L18.4795 7.67425C18.499 7.65125 18.517 7.62711 18.5335 7.60194L19.6109 5.96009C20.3745 4.79633 19.5397 3.25 18.1477 3.25ZM7.65627 9.94405C7.49086 9.92253 7.34823 9.81745 7.27858 9.66604L7.27725 9.66311L5.05674 4.75H18.1477C18.3466 4.75 18.4658 4.9709 18.3567 5.13716L17.3042 6.74123L16.7552 7.39152C15.4132 8.98139 13.4909 9.96832 11.4169 10.1324C10.4603 10.208 9.49842 10.1837 8.54688 10.0599L7.65627 9.94405Z" fill="white"/>
+                                <path d="M5.5 16.5C4.67157 16.5 4 17.1716 4 18C4 18.8284 4.67157 19.5 5.5 19.5C6.32843 19.5 7 18.8284 7 18C7 17.1716 6.32843 16.5 5.5 16.5Z" fill="white"/>
+                                <path d="M15 18C15 17.1716 15.6716 16.5 16.5 16.5C17.3284 16.5 18 17.1716 18 18C18 18.8284 17.3284 19.5 16.5 19.5C15.6716 19.5 15 18.8284 15 18Z" fill="white"/>
+                            </svg> 
+                        </button>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="catalog__card-other">
+          
+            <a class="favorities-button" href="#"><svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0625 6.53724C0.0625 3.16163 3.02393 0.5625 6.5 0.5625C8.29184 0.5625 9.86855 1.40267 11 2.48979C12.1314 1.40267 13.7082 0.5625 15.5 0.5625C18.9761 0.5625 21.9375 3.16163 21.9375 6.53724C21.9375 8.84958 20.9514 10.8831 19.5852 12.6019C18.2214 14.3178 16.4374 15.7741 14.7293 16.9575C14.0769 17.4094 13.4169 17.8264 12.8128 18.134C12.2456 18.4229 11.5934 18.6875 11 18.6875C10.4066 18.6875 9.75437 18.4229 9.18716 18.134C8.5831 17.8264 7.92308 17.4094 7.27067 16.9575C5.56256 15.7741 3.77859 14.3178 2.41478 12.6019C1.0486 10.8831 0.0625 8.84959 0.0625 6.53724ZM6.5 2.4375C3.90094 2.4375 1.9375 4.34887 1.9375 6.53724C1.9375 8.29162 2.68223 9.925 3.88261 11.4353C5.08535 12.9485 6.70365 14.2837 8.33843 15.4162C8.95702 15.8447 9.53968 16.2094 10.0381 16.4632C10.5733 16.7358 10.8833 16.8125 11 16.8125C11.1167 16.8125 11.4267 16.7358 11.9619 16.4632C12.4603 16.2094 13.043 15.8447 13.6616 15.4162C15.2963 14.2837 16.9146 12.9485 18.1174 11.4353C19.3178 9.925 20.0625 8.29161 20.0625 6.53724C20.0625 4.34887 18.0991 2.4375 15.5 2.4375C14.0073 2.4375 12.6135 3.32928 11.7432 4.46115C11.5657 4.69195 11.2911 4.82721 11 4.82721C10.7089 4.82721 10.4343 4.69195 10.2568 4.46115C9.38651 3.32928 7.99269 2.4375 6.5 2.4375Z" fill="#4D4D4D"/>
+                </svg>
+                </a>
+                <img src="image/photo_card.png" alt="">
+            <div class="card__container">
+                <p class="card__dialog">Пигмент для глаз</p>
+                <h2 class="card__title">Loose Eyeshadow 
+                    Pigment</h2>
+                <div class="price-container">
+                    <p class="card__price">990 ₽</p>
+                    <div class="button-container1">
+                        <button class="icon-button">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1477 3.25H4.33514L3.15497 1.1346C3.0225 0.897154 2.7719 0.75 2.5 0.75H1C0.585786 0.75 0.25 1.08579 0.25 1.5C0.25 1.91421 0.585786 2.25 1 2.25H2.0596L3.22429 4.33765L5.91037 10.2809L5.91312 10.2869L6.14971 10.8104L3.45287 13.687C3.25895 13.8939 3.19825 14.1924 3.29599 14.4585C3.39372 14.7247 3.63317 14.913 3.91486 14.9452L6.37299 15.2261C9.44767 15.5775 12.5524 15.5775 15.627 15.2261L18.0852 14.9452C18.4967 14.8981 18.7922 14.5264 18.7452 14.1148C18.6981 13.7033 18.3264 13.4078 17.9149 13.4549L15.4567 13.7358C12.4952 14.0742 9.50481 14.0742 6.54331 13.7358L5.56779 13.6243L7.54717 11.513C7.56632 11.4925 7.5841 11.4713 7.60052 11.4494L8.35334 11.5474C9.40826 11.6847 10.4746 11.7116 11.5351 11.6277C14.0086 11.4321 16.301 10.2551 17.9015 8.35907L18.4795 7.67425C18.499 7.65125 18.517 7.62711 18.5335 7.60194L19.6109 5.96009C20.3745 4.79633 19.5397 3.25 18.1477 3.25ZM7.65627 9.94405C7.49086 9.92253 7.34823 9.81745 7.27858 9.66604L7.27725 9.66311L5.05674 4.75H18.1477C18.3466 4.75 18.4658 4.9709 18.3567 5.13716L17.3042 6.74123L16.7552 7.39152C15.4132 8.98139 13.4909 9.96832 11.4169 10.1324C10.4603 10.208 9.49842 10.1837 8.54688 10.0599L7.65627 9.94405Z" fill="white"/>
+                                <path d="M5.5 16.5C4.67157 16.5 4 17.1716 4 18C4 18.8284 4.67157 19.5 5.5 19.5C6.32843 19.5 7 18.8284 7 18C7 17.1716 6.32843 16.5 5.5 16.5Z" fill="white"/>
+                                <path d="M15 18C15 17.1716 15.6716 16.5 16.5 16.5C17.3284 16.5 18 17.1716 18 18C18 18.8284 17.3284 19.5 16.5 19.5C15.6716 19.5 15 18.8284 15 18Z" fill="white"/>
+                            </svg> 
+                        </button>
+                    </div>
+                </div>  
+            </div>
+        </div>
+
+
+
+        <img class="catalog__image" src="image/696d6167654d6f64656c5f32306161326538336530333934353136393133306338323564653061613335358dca67a8a73770efullhd.png" alt="">
+        
+        
+        
+        <div class="catalog__card-other">
+            
+            <a class="favorities-button" href="#"><svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0625 6.53724C0.0625 3.16163 3.02393 0.5625 6.5 0.5625C8.29184 0.5625 9.86855 1.40267 11 2.48979C12.1314 1.40267 13.7082 0.5625 15.5 0.5625C18.9761 0.5625 21.9375 3.16163 21.9375 6.53724C21.9375 8.84958 20.9514 10.8831 19.5852 12.6019C18.2214 14.3178 16.4374 15.7741 14.7293 16.9575C14.0769 17.4094 13.4169 17.8264 12.8128 18.134C12.2456 18.4229 11.5934 18.6875 11 18.6875C10.4066 18.6875 9.75437 18.4229 9.18716 18.134C8.5831 17.8264 7.92308 17.4094 7.27067 16.9575C5.56256 15.7741 3.77859 14.3178 2.41478 12.6019C1.0486 10.8831 0.0625 8.84959 0.0625 6.53724ZM6.5 2.4375C3.90094 2.4375 1.9375 4.34887 1.9375 6.53724C1.9375 8.29162 2.68223 9.925 3.88261 11.4353C5.08535 12.9485 6.70365 14.2837 8.33843 15.4162C8.95702 15.8447 9.53968 16.2094 10.0381 16.4632C10.5733 16.7358 10.8833 16.8125 11 16.8125C11.1167 16.8125 11.4267 16.7358 11.9619 16.4632C12.4603 16.2094 13.043 15.8447 13.6616 15.4162C15.2963 14.2837 16.9146 12.9485 18.1174 11.4353C19.3178 9.925 20.0625 8.29161 20.0625 6.53724C20.0625 4.34887 18.0991 2.4375 15.5 2.4375C14.0073 2.4375 12.6135 3.32928 11.7432 4.46115C11.5657 4.69195 11.2911 4.82721 11 4.82721C10.7089 4.82721 10.4343 4.69195 10.2568 4.46115C9.38651 3.32928 7.99269 2.4375 6.5 2.4375Z" fill="#4D4D4D"/>
+                </svg>
+                </a>
+                <img src="image/photo_card.png" alt="">
+            <div class="card__container">
+                <p class="card__dialog">Пигмент для глаз</p>
+                <h2 class="card__title">Loose Eyeshadow 
+                    Pigment</h2>
+                <div class="price-container">
+                    <p class="card__price">990 ₽</p>
+                    <div class="button-container1">
+                        <button class="icon-button">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1477 3.25H4.33514L3.15497 1.1346C3.0225 0.897154 2.7719 0.75 2.5 0.75H1C0.585786 0.75 0.25 1.08579 0.25 1.5C0.25 1.91421 0.585786 2.25 1 2.25H2.0596L3.22429 4.33765L5.91037 10.2809L5.91312 10.2869L6.14971 10.8104L3.45287 13.687C3.25895 13.8939 3.19825 14.1924 3.29599 14.4585C3.39372 14.7247 3.63317 14.913 3.91486 14.9452L6.37299 15.2261C9.44767 15.5775 12.5524 15.5775 15.627 15.2261L18.0852 14.9452C18.4967 14.8981 18.7922 14.5264 18.7452 14.1148C18.6981 13.7033 18.3264 13.4078 17.9149 13.4549L15.4567 13.7358C12.4952 14.0742 9.50481 14.0742 6.54331 13.7358L5.56779 13.6243L7.54717 11.513C7.56632 11.4925 7.5841 11.4713 7.60052 11.4494L8.35334 11.5474C9.40826 11.6847 10.4746 11.7116 11.5351 11.6277C14.0086 11.4321 16.301 10.2551 17.9015 8.35907L18.4795 7.67425C18.499 7.65125 18.517 7.62711 18.5335 7.60194L19.6109 5.96009C20.3745 4.79633 19.5397 3.25 18.1477 3.25ZM7.65627 9.94405C7.49086 9.92253 7.34823 9.81745 7.27858 9.66604L7.27725 9.66311L5.05674 4.75H18.1477C18.3466 4.75 18.4658 4.9709 18.3567 5.13716L17.3042 6.74123L16.7552 7.39152C15.4132 8.98139 13.4909 9.96832 11.4169 10.1324C10.4603 10.208 9.49842 10.1837 8.54688 10.0599L7.65627 9.94405Z" fill="white"/>
+                                <path d="M5.5 16.5C4.67157 16.5 4 17.1716 4 18C4 18.8284 4.67157 19.5 5.5 19.5C6.32843 19.5 7 18.8284 7 18C7 17.1716 6.32843 16.5 5.5 16.5Z" fill="white"/>
+                                <path d="M15 18C15 17.1716 15.6716 16.5 16.5 16.5C17.3284 16.5 18 17.1716 18 18C18 18.8284 17.3284 19.5 16.5 19.5C15.6716 19.5 15 18.8284 15 18Z" fill="white"/>
+                            </svg> 
+                        </button>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="catalog__card-other">
+           
+                
+            <a class="favorities-button" href="#"><svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0625 6.53724C0.0625 3.16163 3.02393 0.5625 6.5 0.5625C8.29184 0.5625 9.86855 1.40267 11 2.48979C12.1314 1.40267 13.7082 0.5625 15.5 0.5625C18.9761 0.5625 21.9375 3.16163 21.9375 6.53724C21.9375 8.84958 20.9514 10.8831 19.5852 12.6019C18.2214 14.3178 16.4374 15.7741 14.7293 16.9575C14.0769 17.4094 13.4169 17.8264 12.8128 18.134C12.2456 18.4229 11.5934 18.6875 11 18.6875C10.4066 18.6875 9.75437 18.4229 9.18716 18.134C8.5831 17.8264 7.92308 17.4094 7.27067 16.9575C5.56256 15.7741 3.77859 14.3178 2.41478 12.6019C1.0486 10.8831 0.0625 8.84959 0.0625 6.53724ZM6.5 2.4375C3.90094 2.4375 1.9375 4.34887 1.9375 6.53724C1.9375 8.29162 2.68223 9.925 3.88261 11.4353C5.08535 12.9485 6.70365 14.2837 8.33843 15.4162C8.95702 15.8447 9.53968 16.2094 10.0381 16.4632C10.5733 16.7358 10.8833 16.8125 11 16.8125C11.1167 16.8125 11.4267 16.7358 11.9619 16.4632C12.4603 16.2094 13.043 15.8447 13.6616 15.4162C15.2963 14.2837 16.9146 12.9485 18.1174 11.4353C19.3178 9.925 20.0625 8.29161 20.0625 6.53724C20.0625 4.34887 18.0991 2.4375 15.5 2.4375C14.0073 2.4375 12.6135 3.32928 11.7432 4.46115C11.5657 4.69195 11.2911 4.82721 11 4.82721C10.7089 4.82721 10.4343 4.69195 10.2568 4.46115C9.38651 3.32928 7.99269 2.4375 6.5 2.4375Z" fill="#4D4D4D"/>
+                </svg>
+                </a>
+                <img src="image/photo_card.png" alt="">
+            <div class="card__container">
+                <p class="card__dialog">Пигмент для глаз</p>
+                <h2 class="card__title">Loose Eyeshadow 
+                    Pigment</h2>
+                <div class="price-container">
+                    <p class="card__price">990 ₽</p>
+                    <div class="button-container1">
+                        <button class="icon-button">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1477 3.25H4.33514L3.15497 1.1346C3.0225 0.897154 2.7719 0.75 2.5 0.75H1C0.585786 0.75 0.25 1.08579 0.25 1.5C0.25 1.91421 0.585786 2.25 1 2.25H2.0596L3.22429 4.33765L5.91037 10.2809L5.91312 10.2869L6.14971 10.8104L3.45287 13.687C3.25895 13.8939 3.19825 14.1924 3.29599 14.4585C3.39372 14.7247 3.63317 14.913 3.91486 14.9452L6.37299 15.2261C9.44767 15.5775 12.5524 15.5775 15.627 15.2261L18.0852 14.9452C18.4967 14.8981 18.7922 14.5264 18.7452 14.1148C18.6981 13.7033 18.3264 13.4078 17.9149 13.4549L15.4567 13.7358C12.4952 14.0742 9.50481 14.0742 6.54331 13.7358L5.56779 13.6243L7.54717 11.513C7.56632 11.4925 7.5841 11.4713 7.60052 11.4494L8.35334 11.5474C9.40826 11.6847 10.4746 11.7116 11.5351 11.6277C14.0086 11.4321 16.301 10.2551 17.9015 8.35907L18.4795 7.67425C18.499 7.65125 18.517 7.62711 18.5335 7.60194L19.6109 5.96009C20.3745 4.79633 19.5397 3.25 18.1477 3.25ZM7.65627 9.94405C7.49086 9.92253 7.34823 9.81745 7.27858 9.66604L7.27725 9.66311L5.05674 4.75H18.1477C18.3466 4.75 18.4658 4.9709 18.3567 5.13716L17.3042 6.74123L16.7552 7.39152C15.4132 8.98139 13.4909 9.96832 11.4169 10.1324C10.4603 10.208 9.49842 10.1837 8.54688 10.0599L7.65627 9.94405Z" fill="white"/>
+                                <path d="M5.5 16.5C4.67157 16.5 4 17.1716 4 18C4 18.8284 4.67157 19.5 5.5 19.5C6.32843 19.5 7 18.8284 7 18C7 17.1716 6.32843 16.5 5.5 16.5Z" fill="white"/>
+                                <path d="M15 18C15 17.1716 15.6716 16.5 16.5 16.5C17.3284 16.5 18 17.1716 18 18C18 18.8284 17.3284 19.5 16.5 19.5C15.6716 19.5 15 18.8284 15 18Z" fill="white"/>
+                            </svg> 
+                        </button>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="catalog__card-other">
+            
+                
+            <a class="favorities-button" href="#"><svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0625 6.53724C0.0625 3.16163 3.02393 0.5625 6.5 0.5625C8.29184 0.5625 9.86855 1.40267 11 2.48979C12.1314 1.40267 13.7082 0.5625 15.5 0.5625C18.9761 0.5625 21.9375 3.16163 21.9375 6.53724C21.9375 8.84958 20.9514 10.8831 19.5852 12.6019C18.2214 14.3178 16.4374 15.7741 14.7293 16.9575C14.0769 17.4094 13.4169 17.8264 12.8128 18.134C12.2456 18.4229 11.5934 18.6875 11 18.6875C10.4066 18.6875 9.75437 18.4229 9.18716 18.134C8.5831 17.8264 7.92308 17.4094 7.27067 16.9575C5.56256 15.7741 3.77859 14.3178 2.41478 12.6019C1.0486 10.8831 0.0625 8.84959 0.0625 6.53724ZM6.5 2.4375C3.90094 2.4375 1.9375 4.34887 1.9375 6.53724C1.9375 8.29162 2.68223 9.925 3.88261 11.4353C5.08535 12.9485 6.70365 14.2837 8.33843 15.4162C8.95702 15.8447 9.53968 16.2094 10.0381 16.4632C10.5733 16.7358 10.8833 16.8125 11 16.8125C11.1167 16.8125 11.4267 16.7358 11.9619 16.4632C12.4603 16.2094 13.043 15.8447 13.6616 15.4162C15.2963 14.2837 16.9146 12.9485 18.1174 11.4353C19.3178 9.925 20.0625 8.29161 20.0625 6.53724C20.0625 4.34887 18.0991 2.4375 15.5 2.4375C14.0073 2.4375 12.6135 3.32928 11.7432 4.46115C11.5657 4.69195 11.2911 4.82721 11 4.82721C10.7089 4.82721 10.4343 4.69195 10.2568 4.46115C9.38651 3.32928 7.99269 2.4375 6.5 2.4375Z" fill="#4D4D4D"/>
+                </svg>
+                </a>
+                <img src="image/photo_card.png" alt="">
+            <div class="card__container">
+                <p class="card__dialog">Пигмент для глаз</p>
+                <h2 class="card__title">Loose Eyeshadow 
+                    Pigment</h2>
+                <div class="price-container">
+                    <p class="card__price">990 ₽</p>
+                    <div class="button-container1">
+                        <button class="icon-button">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1477 3.25H4.33514L3.15497 1.1346C3.0225 0.897154 2.7719 0.75 2.5 0.75H1C0.585786 0.75 0.25 1.08579 0.25 1.5C0.25 1.91421 0.585786 2.25 1 2.25H2.0596L3.22429 4.33765L5.91037 10.2809L5.91312 10.2869L6.14971 10.8104L3.45287 13.687C3.25895 13.8939 3.19825 14.1924 3.29599 14.4585C3.39372 14.7247 3.63317 14.913 3.91486 14.9452L6.37299 15.2261C9.44767 15.5775 12.5524 15.5775 15.627 15.2261L18.0852 14.9452C18.4967 14.8981 18.7922 14.5264 18.7452 14.1148C18.6981 13.7033 18.3264 13.4078 17.9149 13.4549L15.4567 13.7358C12.4952 14.0742 9.50481 14.0742 6.54331 13.7358L5.56779 13.6243L7.54717 11.513C7.56632 11.4925 7.5841 11.4713 7.60052 11.4494L8.35334 11.5474C9.40826 11.6847 10.4746 11.7116 11.5351 11.6277C14.0086 11.4321 16.301 10.2551 17.9015 8.35907L18.4795 7.67425C18.499 7.65125 18.517 7.62711 18.5335 7.60194L19.6109 5.96009C20.3745 4.79633 19.5397 3.25 18.1477 3.25ZM7.65627 9.94405C7.49086 9.92253 7.34823 9.81745 7.27858 9.66604L7.27725 9.66311L5.05674 4.75H18.1477C18.3466 4.75 18.4658 4.9709 18.3567 5.13716L17.3042 6.74123L16.7552 7.39152C15.4132 8.98139 13.4909 9.96832 11.4169 10.1324C10.4603 10.208 9.49842 10.1837 8.54688 10.0599L7.65627 9.94405Z" fill="white"/>
+                                <path d="M5.5 16.5C4.67157 16.5 4 17.1716 4 18C4 18.8284 4.67157 19.5 5.5 19.5C6.32843 19.5 7 18.8284 7 18C7 17.1716 6.32843 16.5 5.5 16.5Z" fill="white"/>
+                                <path d="M15 18C15 17.1716 15.6716 16.5 16.5 16.5C17.3284 16.5 18 17.1716 18 18C18 18.8284 17.3284 19.5 16.5 19.5C15.6716 19.5 15 18.8284 15 18Z" fill="white"/>
+                            </svg> 
+                        </button>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="catalog__card-other">
+            
+                
+            <a class="favorities-button" href="#"><svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0625 6.53724C0.0625 3.16163 3.02393 0.5625 6.5 0.5625C8.29184 0.5625 9.86855 1.40267 11 2.48979C12.1314 1.40267 13.7082 0.5625 15.5 0.5625C18.9761 0.5625 21.9375 3.16163 21.9375 6.53724C21.9375 8.84958 20.9514 10.8831 19.5852 12.6019C18.2214 14.3178 16.4374 15.7741 14.7293 16.9575C14.0769 17.4094 13.4169 17.8264 12.8128 18.134C12.2456 18.4229 11.5934 18.6875 11 18.6875C10.4066 18.6875 9.75437 18.4229 9.18716 18.134C8.5831 17.8264 7.92308 17.4094 7.27067 16.9575C5.56256 15.7741 3.77859 14.3178 2.41478 12.6019C1.0486 10.8831 0.0625 8.84959 0.0625 6.53724ZM6.5 2.4375C3.90094 2.4375 1.9375 4.34887 1.9375 6.53724C1.9375 8.29162 2.68223 9.925 3.88261 11.4353C5.08535 12.9485 6.70365 14.2837 8.33843 15.4162C8.95702 15.8447 9.53968 16.2094 10.0381 16.4632C10.5733 16.7358 10.8833 16.8125 11 16.8125C11.1167 16.8125 11.4267 16.7358 11.9619 16.4632C12.4603 16.2094 13.043 15.8447 13.6616 15.4162C15.2963 14.2837 16.9146 12.9485 18.1174 11.4353C19.3178 9.925 20.0625 8.29161 20.0625 6.53724C20.0625 4.34887 18.0991 2.4375 15.5 2.4375C14.0073 2.4375 12.6135 3.32928 11.7432 4.46115C11.5657 4.69195 11.2911 4.82721 11 4.82721C10.7089 4.82721 10.4343 4.69195 10.2568 4.46115C9.38651 3.32928 7.99269 2.4375 6.5 2.4375Z" fill="#4D4D4D"/>
+                </svg>
+                </a>
+                <img src="image/photo_card.png" alt="">
+            <div class="card__container">
+                <p class="card__dialog">Пигмент для глаз</p>
+                <h2 class="card__title">Loose Eyeshadow 
+                    Pigment</h2>
+                <div class="price-container">
+                    <p class="card__price">990 ₽</p>
+                    <div class="button-container1">
+                        <button class="icon-button">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1477 3.25H4.33514L3.15497 1.1346C3.0225 0.897154 2.7719 0.75 2.5 0.75H1C0.585786 0.75 0.25 1.08579 0.25 1.5C0.25 1.91421 0.585786 2.25 1 2.25H2.0596L3.22429 4.33765L5.91037 10.2809L5.91312 10.2869L6.14971 10.8104L3.45287 13.687C3.25895 13.8939 3.19825 14.1924 3.29599 14.4585C3.39372 14.7247 3.63317 14.913 3.91486 14.9452L6.37299 15.2261C9.44767 15.5775 12.5524 15.5775 15.627 15.2261L18.0852 14.9452C18.4967 14.8981 18.7922 14.5264 18.7452 14.1148C18.6981 13.7033 18.3264 13.4078 17.9149 13.4549L15.4567 13.7358C12.4952 14.0742 9.50481 14.0742 6.54331 13.7358L5.56779 13.6243L7.54717 11.513C7.56632 11.4925 7.5841 11.4713 7.60052 11.4494L8.35334 11.5474C9.40826 11.6847 10.4746 11.7116 11.5351 11.6277C14.0086 11.4321 16.301 10.2551 17.9015 8.35907L18.4795 7.67425C18.499 7.65125 18.517 7.62711 18.5335 7.60194L19.6109 5.96009C20.3745 4.79633 19.5397 3.25 18.1477 3.25ZM7.65627 9.94405C7.49086 9.92253 7.34823 9.81745 7.27858 9.66604L7.27725 9.66311L5.05674 4.75H18.1477C18.3466 4.75 18.4658 4.9709 18.3567 5.13716L17.3042 6.74123L16.7552 7.39152C15.4132 8.98139 13.4909 9.96832 11.4169 10.1324C10.4603 10.208 9.49842 10.1837 8.54688 10.0599L7.65627 9.94405Z" fill="white"/>
+                                <path d="M5.5 16.5C4.67157 16.5 4 17.1716 4 18C4 18.8284 4.67157 19.5 5.5 19.5C6.32843 19.5 7 18.8284 7 18C7 17.1716 6.32843 16.5 5.5 16.5Z" fill="white"/>
+                                <path d="M15 18C15 17.1716 15.6716 16.5 16.5 16.5C17.3284 16.5 18 17.1716 18 18C18 18.8284 17.3284 19.5 16.5 19.5C15.6716 19.5 15 18.8284 15 18Z" fill="white"/>
+                            </svg> 
+                        </button>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="catalog__card-other">
+            
+                
+            <a class="favorities-button" href="#"><svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0625 6.53724C0.0625 3.16163 3.02393 0.5625 6.5 0.5625C8.29184 0.5625 9.86855 1.40267 11 2.48979C12.1314 1.40267 13.7082 0.5625 15.5 0.5625C18.9761 0.5625 21.9375 3.16163 21.9375 6.53724C21.9375 8.84958 20.9514 10.8831 19.5852 12.6019C18.2214 14.3178 16.4374 15.7741 14.7293 16.9575C14.0769 17.4094 13.4169 17.8264 12.8128 18.134C12.2456 18.4229 11.5934 18.6875 11 18.6875C10.4066 18.6875 9.75437 18.4229 9.18716 18.134C8.5831 17.8264 7.92308 17.4094 7.27067 16.9575C5.56256 15.7741 3.77859 14.3178 2.41478 12.6019C1.0486 10.8831 0.0625 8.84959 0.0625 6.53724ZM6.5 2.4375C3.90094 2.4375 1.9375 4.34887 1.9375 6.53724C1.9375 8.29162 2.68223 9.925 3.88261 11.4353C5.08535 12.9485 6.70365 14.2837 8.33843 15.4162C8.95702 15.8447 9.53968 16.2094 10.0381 16.4632C10.5733 16.7358 10.8833 16.8125 11 16.8125C11.1167 16.8125 11.4267 16.7358 11.9619 16.4632C12.4603 16.2094 13.043 15.8447 13.6616 15.4162C15.2963 14.2837 16.9146 12.9485 18.1174 11.4353C19.3178 9.925 20.0625 8.29161 20.0625 6.53724C20.0625 4.34887 18.0991 2.4375 15.5 2.4375C14.0073 2.4375 12.6135 3.32928 11.7432 4.46115C11.5657 4.69195 11.2911 4.82721 11 4.82721C10.7089 4.82721 10.4343 4.69195 10.2568 4.46115C9.38651 3.32928 7.99269 2.4375 6.5 2.4375Z" fill="#4D4D4D"/>
+                </svg>
+                </a>
+                <img src="image/photo_card.png" alt="">
+            <div class="card__container">
+                <p class="card__dialog">Пигмент для глаз</p>
+                <h2 class="card__title">Loose Eyeshadow 
+                    Pigment</h2>
+                <div class="price-container">
+                    <p class="card__price">990 ₽</p>
+                    <div class="button-container1">
+                        <button class="icon-button">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1477 3.25H4.33514L3.15497 1.1346C3.0225 0.897154 2.7719 0.75 2.5 0.75H1C0.585786 0.75 0.25 1.08579 0.25 1.5C0.25 1.91421 0.585786 2.25 1 2.25H2.0596L3.22429 4.33765L5.91037 10.2809L5.91312 10.2869L6.14971 10.8104L3.45287 13.687C3.25895 13.8939 3.19825 14.1924 3.29599 14.4585C3.39372 14.7247 3.63317 14.913 3.91486 14.9452L6.37299 15.2261C9.44767 15.5775 12.5524 15.5775 15.627 15.2261L18.0852 14.9452C18.4967 14.8981 18.7922 14.5264 18.7452 14.1148C18.6981 13.7033 18.3264 13.4078 17.9149 13.4549L15.4567 13.7358C12.4952 14.0742 9.50481 14.0742 6.54331 13.7358L5.56779 13.6243L7.54717 11.513C7.56632 11.4925 7.5841 11.4713 7.60052 11.4494L8.35334 11.5474C9.40826 11.6847 10.4746 11.7116 11.5351 11.6277C14.0086 11.4321 16.301 10.2551 17.9015 8.35907L18.4795 7.67425C18.499 7.65125 18.517 7.62711 18.5335 7.60194L19.6109 5.96009C20.3745 4.79633 19.5397 3.25 18.1477 3.25ZM7.65627 9.94405C7.49086 9.92253 7.34823 9.81745 7.27858 9.66604L7.27725 9.66311L5.05674 4.75H18.1477C18.3466 4.75 18.4658 4.9709 18.3567 5.13716L17.3042 6.74123L16.7552 7.39152C15.4132 8.98139 13.4909 9.96832 11.4169 10.1324C10.4603 10.208 9.49842 10.1837 8.54688 10.0599L7.65627 9.94405Z" fill="white"/>
+                                <path d="M5.5 16.5C4.67157 16.5 4 17.1716 4 18C4 18.8284 4.67157 19.5 5.5 19.5C6.32843 19.5 7 18.8284 7 18C7 17.1716 6.32843 16.5 5.5 16.5Z" fill="white"/>
+                                <path d="M15 18C15 17.1716 15.6716 16.5 16.5 16.5C17.3284 16.5 18 17.1716 18 18C18 18.8284 17.3284 19.5 16.5 19.5C15.6716 19.5 15 18.8284 15 18Z" fill="white"/>
+                            </svg> 
+                        </button>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="catalog__card-other">
+            
+                
+            <a class="favorities-button" href="#"><svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0625 6.53724C0.0625 3.16163 3.02393 0.5625 6.5 0.5625C8.29184 0.5625 9.86855 1.40267 11 2.48979C12.1314 1.40267 13.7082 0.5625 15.5 0.5625C18.9761 0.5625 21.9375 3.16163 21.9375 6.53724C21.9375 8.84958 20.9514 10.8831 19.5852 12.6019C18.2214 14.3178 16.4374 15.7741 14.7293 16.9575C14.0769 17.4094 13.4169 17.8264 12.8128 18.134C12.2456 18.4229 11.5934 18.6875 11 18.6875C10.4066 18.6875 9.75437 18.4229 9.18716 18.134C8.5831 17.8264 7.92308 17.4094 7.27067 16.9575C5.56256 15.7741 3.77859 14.3178 2.41478 12.6019C1.0486 10.8831 0.0625 8.84959 0.0625 6.53724ZM6.5 2.4375C3.90094 2.4375 1.9375 4.34887 1.9375 6.53724C1.9375 8.29162 2.68223 9.925 3.88261 11.4353C5.08535 12.9485 6.70365 14.2837 8.33843 15.4162C8.95702 15.8447 9.53968 16.2094 10.0381 16.4632C10.5733 16.7358 10.8833 16.8125 11 16.8125C11.1167 16.8125 11.4267 16.7358 11.9619 16.4632C12.4603 16.2094 13.043 15.8447 13.6616 15.4162C15.2963 14.2837 16.9146 12.9485 18.1174 11.4353C19.3178 9.925 20.0625 8.29161 20.0625 6.53724C20.0625 4.34887 18.0991 2.4375 15.5 2.4375C14.0073 2.4375 12.6135 3.32928 11.7432 4.46115C11.5657 4.69195 11.2911 4.82721 11 4.82721C10.7089 4.82721 10.4343 4.69195 10.2568 4.46115C9.38651 3.32928 7.99269 2.4375 6.5 2.4375Z" fill="#4D4D4D"/>
+                </svg>
+                </a>
+                <img src="image/photo_card.png" alt="">
+            <div class="card__container">
+                <p class="card__dialog">Пигмент для глаз</p>
+                <h2 class="card__title">Loose Eyeshadow 
+                    Pigment</h2>
+                <div class="price-container">
+                    <p class="card__price">990 ₽</p>
+                    <div class="button-container1">
+                        <button class="icon-button">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1477 3.25H4.33514L3.15497 1.1346C3.0225 0.897154 2.7719 0.75 2.5 0.75H1C0.585786 0.75 0.25 1.08579 0.25 1.5C0.25 1.91421 0.585786 2.25 1 2.25H2.0596L3.22429 4.33765L5.91037 10.2809L5.91312 10.2869L6.14971 10.8104L3.45287 13.687C3.25895 13.8939 3.19825 14.1924 3.29599 14.4585C3.39372 14.7247 3.63317 14.913 3.91486 14.9452L6.37299 15.2261C9.44767 15.5775 12.5524 15.5775 15.627 15.2261L18.0852 14.9452C18.4967 14.8981 18.7922 14.5264 18.7452 14.1148C18.6981 13.7033 18.3264 13.4078 17.9149 13.4549L15.4567 13.7358C12.4952 14.0742 9.50481 14.0742 6.54331 13.7358L5.56779 13.6243L7.54717 11.513C7.56632 11.4925 7.5841 11.4713 7.60052 11.4494L8.35334 11.5474C9.40826 11.6847 10.4746 11.7116 11.5351 11.6277C14.0086 11.4321 16.301 10.2551 17.9015 8.35907L18.4795 7.67425C18.499 7.65125 18.517 7.62711 18.5335 7.60194L19.6109 5.96009C20.3745 4.79633 19.5397 3.25 18.1477 3.25ZM7.65627 9.94405C7.49086 9.92253 7.34823 9.81745 7.27858 9.66604L7.27725 9.66311L5.05674 4.75H18.1477C18.3466 4.75 18.4658 4.9709 18.3567 5.13716L17.3042 6.74123L16.7552 7.39152C15.4132 8.98139 13.4909 9.96832 11.4169 10.1324C10.4603 10.208 9.49842 10.1837 8.54688 10.0599L7.65627 9.94405Z" fill="white"/>
+                                <path d="M5.5 16.5C4.67157 16.5 4 17.1716 4 18C4 18.8284 4.67157 19.5 5.5 19.5C6.32843 19.5 7 18.8284 7 18C7 17.1716 6.32843 16.5 5.5 16.5Z" fill="white"/>
+                                <path d="M15 18C15 17.1716 15.6716 16.5 16.5 16.5C17.3284 16.5 18 17.1716 18 18C18 18.8284 17.3284 19.5 16.5 19.5C15.6716 19.5 15 18.8284 15 18Z" fill="white"/>
+                            </svg> 
+                        </button>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    
+    </div>
+
+
+
+</section>
+
+
+    <script src="catalog.js"></script>
+</body>
+</html>

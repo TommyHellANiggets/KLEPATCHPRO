@@ -1,0 +1,292 @@
+body{
+    
+    font-family: "Raleway", sans-serif;
+
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#modalTitle{
+    display: flex;
+    justify-content: start;
+    margin-left: -200PX;
+}
+
+#submitReset{
+    border-radius: 50PX;
+    width: 470PX;
+    background: black;
+    color: white;
+    height:45PX ;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    right: 0;
+    top: 0;
+    width: 1000px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+}
+
+.modal-content {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-switch {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center ;
+}
+
+.switch-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #B4B4B4;
+    font-weight: bold;
+}
+
+.switch-btn.active {
+   
+    color: black;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form.hidden {
+    display: none;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    width: 420px;
+    height: 20px;
+
+}
+
+
+
+.register__button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    margin-top: 10px;
+    width: 450px;
+    height: 50px;
+}
+
+#resetPassword, #resetPasswordLink {
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    display: block;
+   
+    
+}
+
+.loginForm__button{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    margin-top: 10px;
+    width: 162px;
+    height: 50px;
+}
+
+.loginForm__container{
+    display: flex;
+    align-items: center;
+}
+
+.resetPasswordLink{
+    margin-left: 200px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+
+
+
+/* Стили для обертки поля с паролем */
+/* Обертка для поля с паролем */
+#loginPassword {
+    position: relative;
+}
+
+/* Стили для кнопки показа пароля */
+.toggle-password {
+    position: absolute;
+    margin-top: 17px;
+    margin-left: -60px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Увеличиваем размер SVG иконки */
+.toggle-password svg {
+    width: 20px;  /* Новый размер иконки */
+    height: 12px;
+}
+
+
+/* Скрываем стандартный чекбокс */
+/* Скрываем стандартный чекбокс */
+.custom-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Стиль для кастомного чекбокса */
+.custom-checkbox {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Стиль для обертки чекбокса */
+.custom-checkbox .checkmark {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+
+/* Иконка пустого бокса */
+.custom-checkbox .box {
+    display: block;
+}
+
+/* Иконка галочки, скрыта по умолчанию */
+.custom-checkbox .checkmark-icon {
+    position: absolute;
+    display: none;
+}
+
+/* Отображение галочки при активном чекбоксе */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark .checkmark-icon {
+    display: block;
+}
+
+
+.slesh{
+    font-size: 30px;
+    margin-top:10px;
+    color: #B4B4B4;
+    font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+    .modal {
+        width: 100%;
+    }
+    .modal-content {
+        max-width: 90%;
+        
+        display: grid;
+        place-items: center;
+    }
+
+    
+    
+}
+@media (max-width: 530px){
+    input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+   
+        padding: 15px;
+        width: 290px;
+        height: 20px;
+    
+    
+    }
+
+    .register__button {
+        
+        width: 320px;
+        height: 50px;
+    }
+
+    .custom-checkbox{
+        width: 300px;
+        font-size: 14px;
+    }
+
+    #modalTitle{
+        margin-left: -100px;
+        font-size: 20px;
+    }
+    
+    .loginForm__container{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 20px;
+    }
+
+    .resetPasswordLink{
+        margin-left: 0;
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+
+    .loginForm__button{
+        width: 320px;
+    }
+   #submitReset{
+    width: 320px;
+   }
+   .resetForm__dialog{
+    width: 320px;
+   }
+}
+
+
+@media(max-width:400px){
+    .modal-content{
+        margin-left: -20px;
+       }
+}
+
