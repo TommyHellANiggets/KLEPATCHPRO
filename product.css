@@ -1,8 +1,8 @@
 .product {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    max-width: 1800px;
+    gap: 66px;
+    max-width: 1670px;
     margin: 0 auto;
 }
 

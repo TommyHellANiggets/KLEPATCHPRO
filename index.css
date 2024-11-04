@@ -293,6 +293,10 @@ color: #000000;
     color: #000;
 }
 
+.header {
+    z-index: 2300 !important;
+}
+
 /* Бейдж "NEW" */
 .product__badge {
     display: flex;
@@ -528,62 +532,164 @@ color: #000000;
     background-color: #333;
 }
 
-/* Кастомные кнопки навигации */
-.custom-carousel__button {
+
+
+.carousel-home {
+    position: relative;
+    max-width: 1800px;
+    width: 100%;
+    height: 922px;
+    margin: 0 auto;
+}
+
+.swiper-wrapper {
+    position: relative;
+    max-width: 1800px;
+    width: 100%;
+    height: 922px;
+    margin: 0 auto;
+}
+
+.main-banner {
+    position: absolute;
+    height: auto;
+    width: 100%;
+
+}
+
+.arrows {
+    width: calc(100% - 100px);
+    margin-inline: 50px;
+    display: flex;
+    justify-content: space-between;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-    background-color: #000;
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 10;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.custom-carousel__button--prev {
-    left: -40px;
-}
-
-.custom-carousel__button--next {
-    right: -40px;
-}
-
-.discounts {
-    max-width: 1470px;
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 120px;
-    margin-bottom: 60px;
 
 }
 
-.carousel-nav__btn {
+.next-button__main,
+.prev-button__main {
     background-color: transparent;
     border: none;
-
+    color: white;
 }
 
-.discounts__top {
+.pagination-dot {
+    color: white;
+}
+
+.pagination-dot__active {
+    color: black;
+}
+
+.pagination-main {
     display: flex;
-    justify-content: space-between;
+    gap: 44px;
+    float: right;
+    position: absolute;
+    bottom: 95px;
+    right: 70px;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -60%);
+}
+
+.banner-text__title {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 65px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.banner-text__p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+}
+
+.banner-text__link {
+    max-width: 298px;
+    width: 100%;
+    height: 61px;
+    padding: 15px 29px;
+    background: rgba(255, 255, 255, 0.82);
+    border-radius: 100px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    display: flex;
     align-items: center;
-    padding-bottom: 60px;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 50px;
+    font-size: 18px;
+    line-height: 21px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #000000;
 }
 
-.prev {
-    color: #B4B4B4;
-    
+.catalog-button_link {
+width: 298px;
+height: 61px;
+
+background-color: #000000;
+border-radius: 100px;
+display: flex;
+justify-content: space-between;
+padding-inline: 30px;
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 21px;
+font-feature-settings: 'pnum' on, 'lnum' on;
+align-items: center;
+color: #FFFFFF;
+
+
+
 }
 
-.carousel-nav {
-    display: flex;
-    gap: 35px;
+.product__block {
+    position: absolute;
+    bottom: 20px;
+    padding: 80px !important;
 }
 
+.product__block-title {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40.3209px;
+    line-height: 47px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.product-p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 142.99%;
+    color: #FFFFFF;
+    max-width: 600px;
+    padding-bottom: 66px;
+}
+
+.mission {
+    padding-top: 138px;
+}

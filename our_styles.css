@@ -1901,3 +1901,21 @@ menu {
     border-radius: 20px;
     height: 870px;
 }
+.swiper-container {
+    max-width: 100%; /* Ограничение ширины контейнера */
+    overflow: hidden; /* Скрывать карточки, выходящие за пределы */
+    max-width: 1356px;
+
+}
+
+.swiper-wrapper {
+    display: flex;
+    gap: 50px;
+}
+
+
+.breadcrumb {
+    max-width: 1670px;
+    margin: 0 auto;
+    padding: 90px 0 20px;
+}
