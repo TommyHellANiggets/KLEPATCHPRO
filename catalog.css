@@ -38,8 +38,6 @@ body{
     bottom: 10px;
 }
 
-
-
 .card__dialog{
     color: #B4B4B4;
     margin-bottom: -10px;
@@ -75,9 +73,10 @@ color: #000000;
 
 .catalog{
     margin-top: 50px;
-    display: grid;
+    display: grid !important;
     grid-template-columns: 350px 350px 350px 350px;
     justify-content: center;  
+
 }
 
 .catalog__image{

@@ -503,3 +503,11 @@ h1, h2, h3 {
 .header__catalog-button {
     color: white !important;
 }
+
+.aside-buttons {
+    margin-bottom: 50px;
+}
+
+.customer-data {
+    margin-bottom: 50px;
+}

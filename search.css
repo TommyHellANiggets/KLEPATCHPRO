@@ -216,21 +216,45 @@ color: #000000;
     justify-content: center;
     padding: 0;
     margin-left: 10px;
+    background-color: #000000;
+    color: white;
 }
+
+.icon-button:hover {
+    background-color: #68C3CD;
+}
+
 .icon-button svg {
     width: 18px;
     height: 18px;
-    fill: black;
 }
 
 .zapros{
     margin-top: 30px;
-    margin-left: 23%;
-    
+    margin-inline: auto;
+    max-width: 1360px;    
 }
 
 .zapros__title{
     font-size: 50px;
+}
+
+.icon-buttons {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.catalog {
+    display: flex !important;
+    padding-bottom: 0 ;
+    max-height: 680px;
 }
 
 
