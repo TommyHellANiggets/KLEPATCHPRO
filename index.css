@@ -90,6 +90,7 @@ float: right;
     max-width: 1470px;
     margin: 0 auto;
     margin-top: 60px;
+    padding-inline: 20px;
 }
 
 .catalog-cards__card {
@@ -136,12 +137,15 @@ float: right;
     max-width: 1050px;
     margin: 0 auto;
     margin-top: 80px;
+    padding-inline: 20px;
 }
 
 .shone__top {
     display: flex;
     justify-content: space-between;
 }
+
+
 
 .shine__description {
     margin-top: 66px;
@@ -157,7 +161,7 @@ float: right;
 .shine__slogan {
     font-style: normal;
     font-weight: 700;
-    font-size: 113.998px;
+    font-size: 114px;
     line-height: 134px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -166,36 +170,69 @@ float: right;
     top: -60px;
 }
 
+@media (max-width: 940px) {
+    .shine__slogan {
+        font-size: calc(40px + (114 - 40) * ((100vw - 320px) / (940 - 320)));
+        line-height: calc(40px + (134 - 40) * ((100vw - 320px) / (940 - 320)));
+    }
+}
+
+@media (max-width: 320px) {
+    .shine__slogan {
+        font-size: 40px;
+        line-height: 40px;
+    }
+}
+
+
 .about-brand {
-background: #000000;
-border-radius: 100px;
-display: flex;
-justify-content: space-between;
-padding: 20px 30px;
-align-items: center;
-color: white;
-font-family: 'Raleway';
-font-style: normal;
-font-weight: 700;
-font-size: 18px;
-line-height: 21px;
-font-feature-settings: 'pnum' on, 'lnum' on;
-color: #FFFFFF;
+    background: #000000;
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    align-items: center;
+    color: white;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+}
+
+.shine__phototop {
+    width: 50%;
+    height: 312px;
 }
 
 .shine__bottom-right p {
-font-family: 'Raleway';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 142.99%;
-color: #000000;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px; /* начальный размер шрифта */
+    line-height: 40px; /* начальный line-height */
+    color: #000000;
+}
+
+@media (max-width: 940px) {
+    .shine__bottom-right p {
+        font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (940 - 320)));
+        line-height: calc(28px + (40 - 28) * ((100vw - 320px) / (940 - 320)));
+    }
+}
+
+@media (max-width: 320px) {
+    .shine__bottom-right p {
+        font-size: 20px;
+        line-height: 28px;
+    }
 }
 
 .shine__bottom-right {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
     float: right;
     gap: 20px;
 }
@@ -204,13 +241,14 @@ color: #000000;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
+    width: 100%;
 }
 
-/* Основной контейнер */
 .product {
     display: flex;
     justify-content: space-between;
-    height: 870px;
+    height: auto;
     max-width: 1800px;
     width: 100%;
     margin: 0 auto;
@@ -218,19 +256,19 @@ color: #000000;
     gap: 18px;
 }
 
-/* Первая карточка с изображением */
-.product__item--image {
+.product__item {
     position: relative;
     max-width: 895px;
+    width: 100%;
     height: auto;
     border-radius: 10px;
-    overflow: hidden;
 }
 
 .product__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .product__text {
@@ -250,10 +288,8 @@ color: #000000;
     max-width: 600px;
 }
 
-/* Вторая карточка с фоном и контентом */
 .product__item--overlay {
     position: relative;
-    width: 895px;
     height: 100%;
     max-height: 870px;
     border-radius: 10px;
@@ -262,7 +298,6 @@ color: #000000;
     flex-direction: column;
 }
 
-/* Фон с изображением */
 .product__background-wrapper {
     position: absolute;
     top: 0;
@@ -280,15 +315,15 @@ color: #000000;
     border-radius: 10px;
 }
 
-/* Контейнер для всего контента поверх изображения */
 .product__content {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Равномерное распределение элементов */
+    justify-content: space-between; 
     align-items: flex-start;
     padding: 30px;
-    height: 100%; /* Занимаем всю высоту родителя */
+    width: 100%;
+    aspect-ratio: 1;
     z-index: 2;
     color: #000;
 }
@@ -297,7 +332,27 @@ color: #000000;
     z-index: 2300 !important;
 }
 
-/* Бейдж "NEW" */
+@media (max-width: 768px) {
+    .product {
+        margin-top: 50px;
+        flex-direction: column;
+    }
+
+    .shone__top {
+        flex-direction: column;
+    }
+
+    .shine-top__img {
+        max-width: 400px;
+        margin-left: auto;
+    }
+
+    .shine__description {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}
+
 .product__badge {
     display: flex;
     width: 60px;
@@ -418,7 +473,6 @@ color: #000000;
     color: #000000;
 }
 
-/* Стили для контейнера карусели */
 .custom-carousel {
     position: relative;
 }
@@ -437,7 +491,6 @@ color: #000000;
     margin-right: 20px;
 }
 
-/* Карточка товара */
 .product-card {
     position: relative;
     display: flex;
@@ -538,23 +591,16 @@ color: #000000;
     position: relative;
     max-width: 1800px;
     width: 100%;
-    height: 922px;
+    height: auto;
     margin: 0 auto;
-}
-
-.swiper-wrapper {
-    position: relative;
-    max-width: 1800px;
-    width: 100%;
-    height: 922px;
-    margin: 0 auto;
+    
 }
 
 .main-banner {
-    position: absolute;
+    position: relative;
     height: auto;
     width: 100%;
-
+    min-height: 634px;
 }
 
 .arrows {
@@ -692,5 +738,173 @@ color: #FFFFFF;
 
 .mission {
     padding-top: 138px;
-    
+    max-width: 1200px;
+    width: 100%;
+    margin-inline: auto;
+    padding-bottom: 100px;
+}
+
+.mission__title {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 55px; /* начальный размер шрифта */
+    line-height: 65px; /* начальный line-height */
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+@media (max-width: 940px) {
+    .mission__title {
+        font-size: calc(30px + (55 - 30) * ((100vw - 320px) / (940 - 320)));
+        line-height: calc(35px + (65 - 35) * ((100vw - 320px) / (940 - 320)));
+    }
+}
+
+@media (max-width: 320px) {
+    .mission__title {
+        font-size: 30px;
+        line-height: 35px;
+    }
+}
+
+
+.mission__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mission__image {
+    max-width: 532px;
+    width: 100%;
+    height: auto;
+    margin-top: 106px;
+}
+
+.mission__text {
+    max-width: 550px;
+    width: 100%;
+}
+
+.mission__paragraph {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 142.99%;
+    color: #000000;
+}
+
+.mission__button {
+    width: 298px;
+    height: 61px;
+    background: #000000;
+    border-radius: 100px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 30px;
+    align-items: center;
+    margin-top: 63px;
+}
+
+.video {
+    max-width: 1470px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.video__header {
+    display: flex;
+
+}
+
+.video {
+    width: 100%;
+}
+
+.video__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 66px;
+}
+
+.video__title {
+    margin-inline: auto;
+    font-size: 24px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 117.59%;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.video__header {
+    padding-left: 103px;
+}
+
+.card-container {
+    max-width: 1350px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    gap: 20px;
+    padding-bottom: 120px;
+}
+
+.card {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 0 0 auto; 
+        width: 260px;
+        height: auto;
+    }
+
+    .card-container {
+        overflow-x: hidden;
+        margin: 0;
+    }
+}
+
+
+
+
+.card__image {
+    position: relative;
+}
+
+.card__overlay {
+    padding: 20px;
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40.3209px;
+    line-height: 47px;
+    text-transform: uppercase;
+    color: #FFFFFF;
 }
