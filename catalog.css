@@ -38,6 +38,8 @@ body{
     bottom: 10px;
 }
 
+
+
 .card__dialog{
     color: #B4B4B4;
     margin-bottom: -10px;
@@ -73,10 +75,9 @@ color: #000000;
 
 .catalog{
     margin-top: 50px;
-    display: grid !important;
+    display: grid;
     grid-template-columns: 350px 350px 350px 350px;
     justify-content: center;  
-
 }
 
 .catalog__image{
@@ -470,8 +471,43 @@ color: #000000;
 
     
 }
+@media(max-width:550px){
+    .dropdow-adaptiv{
+        display: block;
+        display: flex;
+        
+     }
 
-@media(max-width:375px){
+     .dropdow-container{
+        display: none;
+    }
+    .dropdown--active{
+        padding-top: 100px;
+        padding-left: 20px;
+        background-color:#FFFFFF;
+    
+        width: 300px;
+        height: 700px;
+        border-radius: 20px;
+        display: block;
+        position: absolute;
+        z-index: 1000;
+    }
+    
+    .dropdown-content {
+        
+        position: static;
+        
+    }
+    .none-adaptiv{
+        display: none;
+    }
+    .button-filter{
+        margin-left: 40px;
+    }
+}
+
+@media(max-width:376px){
     .image{
         max-width: 361px;
         width: 100%;
@@ -506,36 +542,7 @@ color: #000000;
         margin-bottom: 15px;
     }
 
-    .dropdow-adaptiv{
-        display: block;
-        display: flex;
-        
-     }
-
-     .dropdow-container{
-        display: none;
-    }
-    .dropdown--active{
-        padding-top: 100px;
-        padding-left: 20px;
-        background-color:#FFFFFF;
     
-        width: 300px;
-        height: 700px;
-        border-radius: 20px;
-        display: block;
-        position: absolute;
-        z-index: 1000;
-    }
-    
-    .dropdown-content {
-        
-        position: static;
-        
-    }
-    .none-adaptiv{
-        display: none;
-    }
     .correct-position{
         margin-left: -12px;
         
@@ -544,7 +551,9 @@ color: #000000;
         
         margin-top: -10px;
     }
-   
+    .button-filter{
+        margin-left: 10px;
+    }
 }
 
 
@@ -604,6 +613,22 @@ color: #000000;
 
 .no-scroll {
     overflow: hidden;
+}
+
+.loadMore__button{
+    width: 253px;
+    min-height: 61px;
+    background-color: #000000;
+    color: white;
+    border-radius: 50px;
+    border: none;
+}
+
+.loadMore{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
 }
 
 

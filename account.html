@@ -96,14 +96,30 @@
         <div id="resetSuccess" class="form hidden">
             <h3>Восстановление пароля</h3>
             <p class="resetForm__dialog">Ссылка на восстановление вашего пароля отправлена на указанный email.</p>
-            <button id="createNewPassword">Ввести новый пароль</button>
+            <button id="createNewPasswordBtn">Ввести новый пароль</button>
         </div>
         
          <!-- Форма для ввода нового пароля -->
          <form id="newPasswordForm" class="form hidden">
-            <input type="password" placeholder="Введите новый пароль">
-            <input type="password" placeholder="Повторите новый пароль">
-            <button type="submit">Восстановить</button>
+            <div class="password-input-wrapper">
+                <input class="form__item" type="password" id="createNewPassword" placeholder="Введите новый пароль">
+                <button type="button" class="toggle-password" onclick="togglePassword('createNewPassword')">
+                    <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.6501 4.50148C13.6501 4.50148 10.8196 8.44826 7.32504 8.44826C3.83048 8.44826 1 4.50148 1 4.50148C1 4.50148 3.83048 0.554688 7.32504 0.554688C10.8196 0.554688 13.6501 4.50148 13.6501 4.50148Z" stroke="#B4B4B4"/>
+                        <path d="M7.32426 6.85326C8.60791 6.85326 9.64852 5.80093 9.64852 4.5028C9.64852 3.20468 8.60791 2.15234 7.32426 2.15234C6.04061 2.15234 5 3.20468 5 4.5028C5 5.80093 6.04061 6.85326 7.32426 6.85326Z" fill="#B4B4B4"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="password-input-wrapper">
+                <input class="form__item" type="password" id="createNewPasswordRepeat" placeholder="Повторите новый пароль">
+                <button type="button" class="toggle-password" onclick="togglePassword('createNewPasswordRepeat')">
+                    <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.6501 4.50148C13.6501 4.50148 10.8196 8.44826 7.32504 8.44826C3.83048 8.44826 1 4.50148 1 4.50148C1 4.50148 3.83048 0.554688 7.32504 0.554688C10.8196 0.554688 13.6501 4.50148 13.6501 4.50148Z" stroke="#B4B4B4"/>
+                        <path d="M7.32426 6.85326C8.60791 6.85326 9.64852 5.80093 9.64852 4.5028C9.64852 3.20468 8.60791 2.15234 7.32426 2.15234C6.04061 2.15234 5 3.20468 5 4.5028C5 5.80093 6.04061 6.85326 7.32426 6.85326Z" fill="#B4B4B4"/>
+                    </svg>
+                </button>
+            </div>
+            <button type="submit" id="submitReset">Восстановить</button>
         </form>
     </div>
 </div>

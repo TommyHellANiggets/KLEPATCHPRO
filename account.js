@@ -21,7 +21,7 @@ const resetForm = document.getElementById('resetForm');
 const resetSuccess = document.getElementById('resetSuccess');
 const newPasswordForm = document.getElementById('newPasswordForm');
 const resetPasswordLink = document.getElementById('resetPasswordLink');
-const createNewPasswordBtn = document.getElementById('createNewPassword');
+const createNewPasswordBtn = document.getElementById('createNewPasswordBtn');
 
 function updateTitle(title) {
     modalTitle.textContent = title;
@@ -71,6 +71,15 @@ createNewPasswordBtn.onclick = () => {
     updateTitle('Введите новый пароль');
 };
 
+
+function togglePassword(inputId) {
+    const passwordInput = document.getElementById(inputId);
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+    } else {
+        passwordInput.type = "password";
+    }
+}
 
 
 
