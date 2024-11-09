@@ -1216,3 +1216,11 @@ color: #FFFFFF;
     }
 }
 
+
+.mission__button:hover,
+.discount__card-button:hover,
+.product__button:hover,
+.about-brand:hover {
+    background-color: #6ED3DE;
+    border: #6ED3DE;
+}

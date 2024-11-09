@@ -1399,7 +1399,9 @@ color: #000000;
     overflow-y: auto; /* Прокрутка внутри меню */
 }
 
-
+.icon-button:hover {
+    background-color: #6ED3DE;
+}
 
 /* Ограничение прокрутки страницы при активном меню */
 body.no-scroll {
