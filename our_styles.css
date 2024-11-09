@@ -1335,7 +1335,7 @@ color: #000000;
 
 .navbottom-mobile {
     position: fixed;
-    z-index: 199;
+    z-index: 399;
     bottom: 0;
     background-color: rgb(255, 255, 255);
     border-radius: 15px 15px 0 0;
@@ -1420,6 +1420,10 @@ body.no-scroll {
         padding-top: 70px;
         padding-inline: 0px;
         transform: translateY(0); /* Плавное появление */
+    }
+
+    .header {
+        z-index: 500;
     }
 }
 
@@ -2005,6 +2009,8 @@ menu {
 
 .burger-menu.active {
     margin-top: 0 !important;
+    padding-top: 90px;
+    z-index: 333;
 }
 
 .bottom-banner__button:hover {
