@@ -53,6 +53,10 @@ padding: 0;
 border: none;
 }
 
+button {
+    transition: 0.2s;
+}
+
 /**
 Убираем стандартный маркер маркированному списку,
 у которого есть атрибут class
@@ -516,9 +520,9 @@ color: #000000;
     background-image: url('img/Group 1248.png');
     margin: 0 auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 28px 0;
+    align-items: center;
 }
 
 .bottom-banner__container {
@@ -529,8 +533,8 @@ color: #000000;
     margin: 0 auto;
     justify-content: space-between;
     padding-inline: 20px;
-    gap: 20px;
-
+    gap: 50px;
+    align-items: start;
 }
 
 @media (max-width: 1068px) {
@@ -544,34 +548,76 @@ color: #000000;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
-    font-size: 55px;
-    line-height: 65px;
+    font-size: 55px; /* Начальный размер для больших экранов */
+    line-height: 65px; /* Начальная высота строки для больших экранов */
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #000000;
     padding-bottom: 14px;
 }
 
+/* Адаптивный текст для экранов от 320px до 768px */
+@media (max-width: 768px) {
+    .bottom-banner__title {
+        font-size: calc(30px + (25 * ((100vw - 320px) / 448)));
+        line-height: calc(35.22px + (29.78 * ((100vw - 320px) / 448)));
+    }
+}
+
+/* Фиксированные значения для экранов меньше 320px */
+@media (max-width: 320px) {
+    .bottom-banner__title {
+        font-size: 30px;
+        line-height: 35.22px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+}
+
+
 .bottom-banner__subtitle {
     max-width: 411px;
     width: 100%;
-    height: 66px;
+    height: auto;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
-    font-size: 28.0421px;
-    line-height: 33px;
+    font-size: 28.0421px; /* Начальный размер для больших экранов */
+    line-height: 33px; /* Начальная высота строки для больших экранов */
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: #000000;
 }
+
+/* Адаптивный текст для экранов от 320px до 768px */
+@media (max-width: 768px) {
+    .bottom-banner__subtitle {
+        font-size: calc(15px + (13.0421 * ((100vw - 320px) / 448)));
+        line-height: calc(21.45px + (11.55 * ((100vw - 320px) / 448)));
+    }
+}
+
+/* Фиксированные значения для экранов меньше 320px */
+@media (max-width: 320px) {
+    .bottom-banner__subtitle {
+        font-size: 15px;
+        line-height: 21.45px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+}
+
 
 .bottom-banner__form {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
     gap: 20px;
+    max-width: 505px;
     width: 100%;
     align-items: center;
+    
 }
 
 .bottom-banner__input {
@@ -636,12 +682,32 @@ color: #000000;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
-    line-height: 15px;
+    font-size: 13px; /* Размер шрифта для больших экранов */
+    line-height: 15px; /* Высота строки для больших экранов */
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: #000000;
     text-align: right;
 }
+
+/* Адаптивный текст для экранов от 320px до 768px */
+@media (max-width: 768px) {
+    .bottom-banner__text {
+        font-size: calc(10px + (3 * ((100vw - 320px) / 448)));
+        line-height: calc(11.74px + (3.26 * ((100vw - 320px) / 448)));
+    }
+}
+
+/* Фиксированные значения для экранов меньше 320px */
+@media (max-width: 320px) {
+    .bottom-banner__text {
+        font-size: 10px;
+        line-height: 11.74px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+}
+
 
 .cart__overlay {
     display: none; /* Hidden by default */
@@ -1442,12 +1508,22 @@ body.no-scroll {
     width: 100vw;
     height: 100%; /* Заполняет всю высоту экрана */
     background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный черный фон */
-    z-index: 100;
+    z-index: 10990;
     margin-top: 0;
     padding-top: 20px;
     padding-bottom: 20px;
     overflow: hidden;
     overflow-y: auto; 
+}
+
+.nav-margin {
+    margin-top: 108px;
+}
+
+@media (max-width: 890px) {
+    .nav-margin {
+        margin-top: 88px;
+    }
 }
 
 .catalog-mobile.active {
@@ -1925,4 +2001,12 @@ menu {
     max-width: 1670px;
     margin: 0 auto;
     padding: 90px 0 20px;
+}
+
+.burger-menu.active {
+    margin-top: 0 !important;
+}
+
+.bottom-banner__button:hover {
+    background-color: #6ED3DE;
 }
