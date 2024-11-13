@@ -44,7 +44,7 @@ body{
 
 .card__dialog{
     color: #B4B4B4;
-    margin-bottom: -10px;
+    
 }
 
 .price-container{
@@ -194,6 +194,10 @@ color: #000000;
 .custom-checkbox .checkmark-icon {
     position: absolute;
     display: none;
+    stroke: black;
+    width: 7px;
+    height: 7px;
+    
     
     
 }
@@ -234,6 +238,7 @@ color: #000000;
     position: relative;
     display: inline-block;
     margin-right: 10px;
+    
 }
 
 .dropdown-button {
@@ -377,6 +382,22 @@ color: #000000;
 
 .price-container{
     display: flex;
+    
+}
+.loadMore__button{
+    width: 253px;
+    min-height: 61px;
+    background-color: #000000;
+    color: white;
+    border-radius: 50px;
+    border: none;
+}
+
+.loadMore{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -486,16 +507,16 @@ color: #000000;
         display: none;
     }
     .dropdown--active{
-        padding-top: 100px;
+        padding-top: 70px;
         padding-left: 20px;
         background-color:#FFFFFF;
-    
         width: 300px;
-        height: 700px;
+        height: 800px;
         border-radius: 20px;
         display: block;
         position: absolute;
         z-index: 1000;
+        margin-top: -100px;
     }
     
     .dropdown-content {
@@ -508,6 +529,17 @@ color: #000000;
     }
     .button-filter{
         margin-left: 40px;
+    }
+
+    .dropdown {
+        margin-left: -5px;
+        
+        
+    }
+    .loadMore{
+        margin-top: 25px;
+        margin-bottom: 50px;
+        
     }
 }
 
@@ -566,7 +598,7 @@ color: #000000;
 }
 .close-btn {
     position: absolute;
-    top: 30px;
+    top: 20px;
     right: 20px;
     font-size: 30px;
     font-weight: 100;
@@ -578,10 +610,11 @@ color: #000000;
 
 .dropdow-adaptiv-title{
     position: absolute;
-    top: 1px;
+    top: 20px;
     left: 20px;
     font-size: 30px;
     display: block;
+    font-weight: 700;
 }
 
 .button-apply-filtr{
@@ -619,20 +652,6 @@ color: #000000;
     overflow: hidden;
 }
 
-.loadMore__button{
-    width: 253px;
-    min-height: 61px;
-    background-color: #000000;
-    color: white;
-    border-radius: 50px;
-    border: none;
-}
 
-.loadMore{
-    margin-top: 50px;
-    margin-bottom: 100px;
-    display: flex;
-    justify-content: center;
-}
 
 

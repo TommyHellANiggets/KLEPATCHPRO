@@ -48,6 +48,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 0 20px;
 }
 
 .product-right__category {
@@ -126,7 +127,8 @@
 .product-bottom__box {
     display: flex;
     gap: 17px;
-    width: 515px;
+    max-width: 515px;
+    width: 100%;
 }
 
 .product-right__cart-btn {
@@ -198,7 +200,8 @@
 }
 
 .product-right__selected-shade {
-    width: 511px;
+    max-width: 511px;
+    width: 100%;
     height: 54px;
     border: 1.20192px solid #DDDDDD;
     border-radius: 42.8939px;
@@ -287,7 +290,7 @@
 
 .product-banner__img {
     max-width: 1357px; 
-    width: 100%; 
+    width: calc(100% - 40px); 
     height: auto;
     margin: 0 auto;
     position: relative;
@@ -301,6 +304,7 @@
     margin: 0 auto;
     margin-top: 120px;
     margin-bottom: 60px;
+    padding-left: 20px;
 }
 
 .discounts__top {
@@ -320,7 +324,117 @@
     color: #000000;
 }
 
+.discount__card {
+    width: 298px !important;
+}
+
 .need-help {
     margin-inline: auto;
     width: calc(100% - 40px);
+}
+
+@media (max-width: 1200px) {
+    .product {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.cards-mobile__carousel {
+   width: 100%;
+   overflow: hidden;
+   gap: 20px;
+   display: none;
+}
+
+.card-img {
+    width: 320px;
+    height: 360px;
+    flex-shrink: 0;
+    border-radius: 22px;
+}
+
+@media (max-width: 600px) {
+    .cards-mobile__carousel {
+        display: flex;
+        margin-top: 8px;
+        margin-bottom: 23px;
+    }
+
+    .product-left {
+        display: none;
+    }
+
+
+    .product-right {
+        padding: 0;
+    }
+    
+    .product-right__category,
+    .product-right__title,
+    .product-right__price,
+    .product-bottom__box,
+    .product-right__shades {
+        padding-inline: 20px;
+    }
+
+    .product-right__title {
+        max-width: 100%;
+        font-family: Raleway;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 35.28px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+
+    .product-right__category {
+        font-family: 'Raleway';
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 14.09px;
+        letter-spacing: 0.03em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+
+    .product {
+        padding-top: 88px;
+    }
+
+    .cards-mobile__carousel {
+        padding-left: 20px;
+    }
+
+    .product-right__actions {
+        display: none;
+    }
+
+    .carousel-nav {
+        display: none !important;
+    }
+
+    .discounts__title {
+        font-family: 'Raleway';
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 35.28px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+
+    .need-help {
+        margin-top: 0 !important;
+    }
+
+    .about-product {
+        margin-top: 20px;
+    }
 }

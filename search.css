@@ -42,7 +42,7 @@ body{
 
 .card__dialog{
     color: #B4B4B4;
-    margin-bottom: -10px;
+   
 }
 
 .price-container{
@@ -122,7 +122,7 @@ color: #000000;
 }
 
 .Oplata-container{
-    padding-top: 180px;
+    padding-top: 220px;
     padding-left: 50px;
 }
 .slesh {
@@ -166,12 +166,13 @@ color: #000000;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    color: white;
 }
 
 .icon-button svg {
     width: 20px;
     height: 20px; 
-    fill: white; 
+    
 }
 
  
@@ -229,6 +230,12 @@ color: #000000;
 
 .zapros__title{
     font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.zapros{
+    margin-top: 60px;
+    margin-bottom: 35px;
 }
 
 
@@ -332,6 +339,13 @@ color: #000000;
     .input-container {
         width: 350px;
         height: 40px;
+    }
+
+    
+    
+    .zapros{
+        margin-top: 30px;
+        margin-bottom: 10px;
     }
     
 }
