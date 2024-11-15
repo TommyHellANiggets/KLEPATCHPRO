@@ -511,3 +511,13 @@ h1, h2, h3 {
 .customer-data {
     margin-bottom: 50px;
 }
+
+.order__details-button {
+    margin-bottom: 100px;
+}
+
+@media (max-width: 600px) {
+    .order__details-button {
+        margin-bottom: 0px;
+    }
+}

@@ -148,3 +148,97 @@ document.querySelector('.burger-mobile').addEventListener('click', () => {
   document.body.style.overflow = burgerMenu.style.display === 'block' ? 'hidden' : 'auto'; // Prevent scrolling when open
 });
   
+
+
+
+const modal = document.getElementById('modal');
+const openModalBtns = document.querySelectorAll('.openModalBtn');
+const closeModalBtn = document.getElementById('closeModalBtn');
+const modalTitle = document.getElementById('modalTitle');
+const overlay1 = document.getElementById('overlay1');
+
+openModalBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        modal.style.display = 'block';
+        document.body.classList.toggle('no-scroll1');
+        overlay1.classList.add('active');
+    });
+});
+
+closeModalBtn.onclick = () => {
+    modal.style.display = 'none';
+    document.body.classList.remove('no-scroll1')
+    overlay1.classList.remove('active');
+};
+
+
+
+const loginBtn = document.getElementById('loginBtn');
+const registerBtn = document.getElementById('registerBtn');
+const loginForm = document.getElementById('loginForm');
+const registerForm = document.getElementById('registerForm');
+const resetForm = document.getElementById('resetForm');
+const resetSuccess = document.getElementById('resetSuccess');
+const newPasswordForm = document.getElementById('newPasswordForm');
+const resetPasswordLink = document.getElementById('resetPasswordLink');
+const createNewPasswordBtn = document.getElementById('createNewPasswordBtn');
+const formswitch =  document.getElementById('formswitch');
+
+function updateTitle(title) {
+    modalTitle.textContent = title;
+}
+
+loginBtn.onclick = () => {
+    loginForm.classList.remove('hidden');
+    registerForm.classList.add('hidden');
+    resetForm.classList.add('hidden');
+    resetSuccess.classList.add('hidden');
+    newPasswordForm.classList.add('hidden');
+    loginBtn.classList.add('active');
+    registerBtn.classList.remove('active');
+    updateTitle('Вход в личный кабинет');
+};
+
+registerBtn.onclick = () => {
+    registerForm.classList.remove('hidden');
+    loginForm.classList.add('hidden');
+    resetForm.classList.add('hidden');
+    resetSuccess.classList.add('hidden');
+    newPasswordForm.classList.add('hidden');
+    registerBtn.classList.add('active');
+    loginBtn.classList.remove('active');
+    updateTitle('Регистрация на сайте');
+};
+
+resetPasswordLink.onclick = (event) => {
+    event.preventDefault();
+    resetForm.classList.remove('hidden');
+    registerForm.classList.add('hidden');
+    loginForm.classList.add('hidden');
+    resetSuccess.classList.add('hidden');
+    newPasswordForm.classList.add('hidden');
+    updateTitle('Восстановление пароля');
+    formswitch.classList.add('hidden');
+};
+
+document.getElementById('submitReset').onclick = (event) => {
+    event.preventDefault();
+    resetForm.classList.add('hidden');
+    resetSuccess.classList.remove('hidden');
+};
+
+createNewPasswordBtn.onclick = () => {
+    resetSuccess.classList.add('hidden');
+    newPasswordForm.classList.remove('hidden');
+    updateTitle('Введите новый пароль');
+};
+
+
+function togglePassword(inputId) {
+    const passwordInput = document.getElementById(inputId);
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+    } else {
+        passwordInput.type = "password";
+    }
+}

@@ -2061,3 +2061,395 @@ border: none;
 .breadcrumb {
     padding-inline: 20px;
 }
+
+
+#modalTitle{
+    display: flex;
+    justify-content: start;
+    margin-left: -200PX;
+}
+
+#submitReset{
+    border-radius: 50PX;
+    width: 450PX;
+    background: black;
+    color: white;
+    height:45PX ;
+    border: none;
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    right: 0;
+    top: 0;
+    width: 1000px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+}
+
+.modal-content {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+
+
+.form-switch {
+    margin-top: 220px;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center ;
+}
+.form-switch.hidden{
+    display: none;
+}
+
+.switch-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #B4B4B4;
+    font-weight: bold;
+}
+
+.switch-btn.active {
+   
+    color: black;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form.hidden {
+    display: none;
+}
+
+
+.modal {
+    z-index: 15000;
+}
+
+
+.register__button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    margin-top: 10px;
+    width: 450px;
+    height: 50px;
+    font-weight: 700;
+}
+
+#resetPassword, #resetPasswordLink {
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    display: block;
+    text-decoration: underline;
+   
+    
+}
+
+.loginForm__button{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    margin-top: 10px;
+    width: 162px;
+    height: 50px;
+    font-weight: 700;
+}
+
+.loginForm__container{
+    display: flex;
+    align-items: center;
+}
+
+.resetPasswordLink{
+    margin-left: 170px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+::placeholder {
+    color: black;
+    
+  }
+
+
+
+#loginPassword {
+    position: relative;
+}
+
+
+.toggle-password {
+    position: absolute;
+    margin-top: 23px;
+    margin-left: -50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.toggle-password svg {
+    width: 20px;  
+    height: 12px;
+    color: #B4B4B4;
+    
+}
+
+
+
+.custom-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+.custom-checkbox {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.custom-checkbox .checkmark {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+
+
+.custom-checkbox .box {
+    display: block;
+}
+
+
+.custom-checkbox .checkmark-icon {
+    position: absolute;
+    display: none;
+}
+
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark .checkmark-icon {
+    display: block;
+}
+
+
+.slesh-modal{
+    font-size: 30px;
+    margin-top:10px;
+    color: #B4B4B4;
+    font-weight: 700;
+}
+
+.politic-agree{
+    margin-top: 20px;
+    color: #B4B4B4;
+    font-size: 10px;
+    width: 290px;
+    
+}
+.politic-agree a{
+    color: #B4B4B4;
+}
+
+.resetForm__dialog{
+    margin-bottom: 35px;
+}
+.resetForm__title{
+    margin-top: 220px;
+    font-size: 30px;
+    margin-bottom: 22px;
+}
+
+
+
+@media (max-width: 1024px) {
+    .modal {
+        width: 100%;
+    }
+    .modal-content {
+        max-width: 90%;
+        
+        display: grid;
+        place-items: center;
+    }
+
+    
+    
+}
+@media (max-width: 530px){
+    .form__item[type="text"], .form__item[type="email"], .form__item[type="tel"], .form__item[type="password"] {
+   
+        
+        width: 320px;
+        height: 50px;
+    
+    
+    }
+
+    .register__button {
+        
+        width: 320px;
+        height: 50px;
+    }
+
+    .custom-checkbox{
+        width: 300px;
+        font-size: 14px;
+    }
+
+    #modalTitle{
+        margin-left: -100px;
+        font-size: 20px;
+    }
+    
+    .loginForm__container{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 20px;
+    }
+
+    .resetPasswordLink{
+        margin-left: 0;
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+
+    .loginForm__button{
+        width: 320px;
+    }
+   #submitReset{
+    width: 320px;
+   }
+   .resetForm__dialog{
+    width: 320px;
+   }
+}
+
+
+@media(max-width:400px){
+    .modal-content{
+        margin-left: 7px;
+       }
+}
+
+@media(max-width:360px){
+    
+    .custom-checkbox{
+        margin-left: 10px;
+    }
+    .register__button, .loginForm__button{
+        width: 280px;
+    }
+    input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+        width: 280px;
+    }
+    #submitReset{
+        width: 300px;
+    }
+    .switch-btn {
+        font-size: 28px;
+    }
+    #modalTitle{
+        margin-right: -17px;
+    }
+
+    .resetForm__dialog{
+        font-size: 15px;
+        
+    }
+
+    #resetForm{
+        margin-left: 20px;
+    }
+    #resetForm p{
+        margin-left: 8px;
+    }
+    #resetForm h3{
+        margin-left: -25px;
+    }
+    .form-switch{
+        margin-left: -40px;
+    }
+
+    
+     
+}
+
+
+.overlay1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+    
+}
+.overlay1.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.no-scroll1 {
+    overflow: hidden;
+}
+
+
+@media (max-width: 1024px) {
+    .form-switch {
+        margin-top: 20px;
+    }
+}
+
+.form__item[type="text"], .form__item[type="email"], .form__item[type="tel"], .form__item[type="password"] {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    max-width: 450px;
+    width: 100%;
+    height: 50px;
+
+}

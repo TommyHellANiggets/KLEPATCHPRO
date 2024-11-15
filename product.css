@@ -143,12 +143,21 @@
     line-height: 21px;
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: #FFFFFF;
+    border: none;
+}
+
+.product-right__cart-btn:hover {
+    background: #6ED3DE;
 }
 
 .product-right__wishlist-btn {
     width: 61px;
     height: 61px;
     background: #6ED3DE;
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     border-radius: 30.5px;
     border: none;
 }
@@ -436,5 +445,13 @@
 
     .about-product {
         margin-top: 20px;
+    }
+
+    .discounts {
+        margin-top: 0 !important;
+    }
+
+    .discounts__top {
+        padding-bottom: 20px !important;
     }
 }
