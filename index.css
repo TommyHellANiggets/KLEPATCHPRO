@@ -723,7 +723,6 @@ float: right;
     margin-bottom: 10px;
 }
 
-/* Кнопка добавления в корзину */
 .product-card__cart-button {
     background-color: #000;
     color: #fff;
@@ -753,7 +752,11 @@ float: right;
     width: 100%;
     height: auto;
     margin: 0 auto;
-    
+    overflow-x: hidden;
+}
+
+.carousel-home img {
+    object-fit: cover; 
 }
 
 .main-banner {
