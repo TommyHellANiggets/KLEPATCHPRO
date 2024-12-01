@@ -857,17 +857,50 @@
         </div>
         </div>
         <section class="about-product">
-          <a href="" class="about-product__button about-product__button-active">О продукте</a>
-          <a href="" class="about-product__button">Характеристики</a>
-          <a href="" class="about-product__button">Описание</a>
-          <a href="" class="about-product__button">Способ применения</a>
-          <a href="" class="about-product__button">Состав</a>
-        </section>
-        <section class="product-banners">
-          <img src="img/image 11.png" alt="О продукте 1" class="product-banner__img">
-          <img src="img/image.png" alt="О продукте 2" class="product-banner__img">
-          <img src="img/image-1.png" alt="О продукте 3" class="product-banner__img">
-        </section>
+            <button class="about-product__button about-product__button-active" data-target="product-banners">О продукте</button>
+            <button class="about-product__button" data-target="characterisctics">Характеристики</button>
+            <button class="about-product__button" data-target="description">Описание</button>
+            <button class="about-product__button" data-target="application">Способ применения</button>
+            <button class="about-product__button" data-target="composition">Состав</button>
+          </section>
+          
+          <section class="product-section product-banners product-section-active">
+            <img src="img/image 11.png" alt="О продукте 1" class="product-banner__img">
+            <img src="img/image.png" alt="О продукте 2" class="product-banner__img">
+            <img src="img/image-1.png" alt="О продукте 3" class="product-banner__img">
+          </section>
+          
+          <section class="product-section characterisctics">
+            <h4 class="characterisctics-text">Подробные характеристики</h4>
+            <ul>
+              <li>Тип продукта: тени для век</li>
+              <li>Для кого: женский</li>
+              <li>Тип кожи: для всех типов кожи</li>
+              <li>Область применения: глаза</li>
+              <li>Финиш: сияющий</li>
+              <li>Вес: 3 г</li>
+            </ul>
+          </section>
+          
+          <section class="product-section description">
+            <h4 class="description-text">Описание</h4>
+            <p>
+              Пигмент для глаз KLEPACH.PRO - это универсальное средство для макияжа 
+              с пленительным сиянием. Минеральные пигменты для век - это огромный простор 
+              для творчества визажистов и современных девушек.
+            </p>
+          </section>
+          
+          <section class="product-section application">
+            <h4>Способ применения</h4>
+            <p>Наносить легкими движениями на веки. Использовать аппликатор для равномерного покрытия.</p>
+          </section>
+          
+          <section class="product-section composition">
+            <h4>Состав</h4>
+            <p>Минеральные компоненты, натуральные масла, витамины.</p>
+          </section>
+          
       </div>
       <section class="need-help">
         <div class="need-help__left">
@@ -1218,6 +1251,26 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".about-product__button");
+  const sections = document.querySelectorAll(".product-section");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // Удаляем активный класс со всех кнопок и секций
+      buttons.forEach((btn) => btn.classList.remove("about-product__button-active"));
+      sections.forEach((section) => section.classList.remove("product-section-active"));
+
+      // Добавляем активный класс для нажатой кнопки и связанной секции
+      button.classList.add("about-product__button-active");
+      const target = button.getAttribute("data-target");
+      document.querySelector(`.${target}`).classList.add("product-section-active");
+    });
+  });
 });
 
 
