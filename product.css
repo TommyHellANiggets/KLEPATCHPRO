@@ -113,7 +113,7 @@
 
 .product-right__input {
     display: inline-block; 
-    width: 20px; 
+    max-width: 20px;
     border: none;
     height: 36px;
     font-feature-settings: 'pnum' on, 'lnum' on;
@@ -125,8 +125,9 @@
     line-height: 49px;
     letter-spacing: 0.01em;
     color: #000000;
-    padding: 0; 
+    padding-inline: 10px; 
     text-align: center; 
+    box-sizing: content-box;
 }
 
 
@@ -265,7 +266,6 @@
     justify-content: center; 
     width: 100%;
     margin-top: 104px;
-
 }
 
 @media (max-width: 1160px) {
@@ -303,7 +303,7 @@
 }
 
 .product-banners {
-    padding-top: 30px;
+    padding-top: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -511,3 +511,59 @@
     background-color: #f0f0f0;
   }
   
+  .product-section {
+    display: none;
+  }
+  .product-section-active {
+    display: block;
+  }
+
+.characterisctics,
+.description,
+.application,
+.composition {
+    max-width: 1154px;
+    margin-inline: auto;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 130px;
+}
+
+.product-section p {
+    max-width: 660px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 151%;
+    color: #000000;
+}
+
+.product-section h4 {
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 142.99%;
+    color: #000000;
+    margin: 0;
+}
+
+.product-section ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.product-section ul li {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 180%;
+    color: #000000;
+}
+
+.breadcrumb__link,
+.breadcrumb__separator {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 28px;
+    letter-spacing: -0.011em;
+    color: #B4B4B4;
+}
