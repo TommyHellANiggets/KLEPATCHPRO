@@ -13,14 +13,12 @@ function toggleCatalog() {
 
 function toggleSearch() {
   const searchBar = document.getElementById('searchBar');
-  const isMobile = window.innerWidth <= 768; // Проверка ширины окна
+  const isMobile = window.innerWidth <= 768;
 
   if (isMobile) {
-      // Если мобильный, переключаем видимость контейнера поиска
       const searchContainer = document.querySelector('.search-mobile__container');
       searchContainer.style.display = searchContainer.style.display === 'block' ? 'none' : 'block';
   } else {
-      // Если на десктопе, просто переключаем класс активности
       searchBar.classList.toggle('active');
   }
 }
@@ -60,7 +58,6 @@ document.addEventListener('scroll', function () {
   }
 });
 
-// Инициализация состояния для заголовка при загрузке страницы
 document.addEventListener('DOMContentLoaded', function () {
   const header = document.querySelector('.header');
   if (window.scrollY === 0) {
@@ -80,13 +77,13 @@ document.addEventListener('DOMContentLoaded', () => {
       burgerMenu.classList.toggle('active');
 
       if (burgerMenu.classList.contains('active')) {
-          body.classList.add('no-scroll'); // Блокируем прокрутку страницы
-          burgerIcon.style.display = 'none'; // Скрываем бургер-иконку
-          closeIcon.style.display = 'block'; // Показываем иконку закрытия
+          body.classList.add('no-scroll'); 
+          burgerIcon.style.display = 'none'; 
+          closeIcon.style.display = 'block';
       } else {
-          body.classList.remove('no-scroll'); // Разрешаем прокрутку
-          burgerIcon.style.display = 'block'; // Показываем бургер-иконку
-          closeIcon.style.display = 'none'; // Скрываем иконку закрытия
+          body.classList.remove('no-scroll'); 
+          burgerIcon.style.display = 'block'; 
+          closeIcon.style.display = 'none'; 
       }
   });
 });
@@ -134,18 +131,16 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Toggle search container on search button click
 document.querySelector('.search-mobile').addEventListener('click', () => {
   const searchContainer = document.querySelector('.search-mobile__container');
   searchContainer.style.display = searchContainer.style.display === 'block' ? 'none' : 'block';
-  document.body.style.overflow = searchContainer.style.display === 'block' ? 'hidden' : 'auto'; // Prevent scrolling when open
+  document.body.style.overflow = searchContainer.style.display === 'block' ? 'hidden' : 'auto'; 
 });
 
-// Toggle burger menu on burger button click
 document.querySelector('.burger-mobile').addEventListener('click', () => {
-  const burgerMenu = document.querySelector('.menu'); // Replace '.menu' with the actual burger menu element selector
+  const burgerMenu = document.querySelector('.menu'); 
   burgerMenu.style.display = burgerMenu.style.display === 'block' ? 'none' : 'block';
-  document.body.style.overflow = burgerMenu.style.display === 'block' ? 'hidden' : 'auto'; // Prevent scrolling when open
+  document.body.style.overflow = burgerMenu.style.display === 'block' ? 'hidden' : 'auto'; 
 });
   
 
@@ -242,3 +237,16 @@ function togglePassword(inputId) {
         passwordInput.type = "password";
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.querySelector('.header__clients-button');
+    const dropbox = document.querySelector('.dropbox');
+
+    button.addEventListener('click', () => {
+        if (dropbox.style.display === 'none' || !dropbox.style.display) {
+            dropbox.style.display = 'flex';
+        } else {
+            dropbox.style.display = 'none';
+        }
+    });
+});

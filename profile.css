@@ -522,6 +522,20 @@ h1, h2, h3 {
     }
 }
 
+@media (max-width: 360px) {
+    .need-help__link {
+        padding-inline: 20px !important;
+    }
+
+    .need-help__link{
+        width: 100% !important;
+    }
+
+    .need-help__left h3 {
+        padding-top: 15px !important;
+    }
+}
+
 .loyalty__score {
     width: 100%;
     display: flex;
@@ -608,4 +622,146 @@ h1, h2, h3 {
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: #000000;
     text-align: left;
+}
+
+.loyalty__item {
+    display: flex;
+    gap: 10px;
+}
+
+.loyalty__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 17px 0;
+}
+
+.loyalty__term {
+    max-width: 112px;
+    width: 100%;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 217%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #000000;
+}
+
+.loyalty__description {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 217%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #000000;
+}
+
+.loyalty-mobile > h2 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 117.59%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #000000;
+    padding-bottom: 22px;
+}
+
+.loyalty__list {
+    border-top: 1px solid rgba(221, 221, 221, 1);
+}
+
+.loyalty-mobile {
+    border-bottom: 1px solid rgba(221, 221, 221, 1);
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .loyalty-mobile {
+        display: block;
+    }
+
+    .loyalty > h4, 
+    .loyalty > table {
+        display: none;
+    }
+
+    .loyalty__score {
+        padding: 40px 0;
+    }
+
+    .loyalty__score > h3,
+    .loyalty__score > span {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #000000;
+        padding: 14px 24px;
+        max-height: 69px;
+    }
+
+    .loyalty__title {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 117.59%;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #000000;
+    }
+
+    .nav-banner {
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-banner__title {
+      font-size: calc(30px + (20 * (100vw - 320px) / 280));
+      line-height: 117.59%;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .nav-banner__title {
+      font-size: 30px; 
+      line-height: 117.59%;
+    }
+  }
+
+@media (max-width: 600px) {
+    .nav-banner__list {
+        display: none;
+    }
+
+    .nav-banner {
+        width: 100%; 
+        height: 0; 
+        padding-top: calc(100% * 4 / 9); 
+        position: relative;
+    }
+}
+
+.loyalty-link {
+    width: 298px;
+    height: 61px;
+    background: #000000;
+    border-radius: 100px;
+    padding-inline: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+    margin: 30px 0 100px;
 }
